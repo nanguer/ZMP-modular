@@ -4,7 +4,7 @@ module.exports = {
   mode: 'development',
   entry: './src/app.js',
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'public', 'dist'),
     filename: 'bundle.js'
   },
 
@@ -18,6 +18,17 @@ module.exports = {
       {
         test: /\.s?css$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|jpg|gif|woff)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 100000
+            }
+          }
+        ]
       }
     ]
   }

@@ -17,10 +17,12 @@
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
+    "file-loader": "^2.0.0",
     "gsap": "^2.0.2",
     "jquery": "^3.3.1",
     "normalize.css": "^8.0.0"
