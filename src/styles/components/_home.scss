@@ -1,0 +1,49 @@
+#bigLogo {
+  height: 4vh;
+  width: 8vw;
+  opacity: 0;
+  position: absolute;
+  margin: auto;
+  left: 45vw;
+  top: 45vh;
+  color: rgb(220, 220, 220);
+}
+
+div.logo > h2 {
+  font-family: 'LEIXO';
+  color: orange;
+  font-size: 2.5vw;
+  margin-top: 0px;
+  position: absolute;
+  margin: 30px auto;
+  left: 39.1vw;
+  top: 60vh;
+}
+
+.subtitles {
+  opacity: 0;
+}
+
+#wave {
+  position: fixed;
+  left: 50%;
+  top: 44%;
+  right: 0;
+  z-index: -1;
+  max-height: 100vh;
+  min-height: 60vh;
+  transform: translate(-50%, -50%);
+}
+
+.sidebar {
+  z-index: 5;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1.2rem;
+  width: fit-content;
+  height: 90vh;
+  top: 2rem;
+}

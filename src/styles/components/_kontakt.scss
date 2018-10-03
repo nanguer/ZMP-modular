@@ -1,0 +1,32 @@
+.kontakt {
+  left: 13vw;
+  width: 120vw;
+  display: flex;
+  position: absolute;
+  opacity: 1;
+  top: 0;
+}
+
+.kontakt__container {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+}
+
+.kontakt__text {
+  opacity: 0;
+  position: relative;
+  flex-direction: column;
+  max-width: 24vw;
+  left: -10%;
+  align-self: center;
+}
+
+.map-container {
+  opacity: 0;
+  position: relative;
+  right: -60vw;
+  height: 100vh;
+  width: 45%;
+  background: grey;
+}

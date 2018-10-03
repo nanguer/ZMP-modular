@@ -1,0 +1,59 @@
+.uslugi {
+  color: white;
+  display: none;
+  position: absolute;
+  max-width: 90vw;
+  left: 0;
+  opacity: 0;
+  top: 29vh;
+}
+
+.uslugi__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.paragraph {
+  max-width: 30vw;
+  float: left;
+}
+
+.paragraph p {
+  font-size: 14px;
+}
+
+.console {
+  border: solid 3px gray;
+  height: 300px;
+  width: 480px;
+  float: right;
+  right: 0;
+  margin-left: 80px;
+  position: relative;
+  display: flex;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.line-container {
+  height: 100%;
+  width: 20%;
+  margin-right: 0px;
+}
+
+.actual-line {
+  background-color: white;
+  height: 80%;
+  width: 2px;
+  margin: auto;
+  top: 5%;
+  position: relative;
+}
+
+.number {
+  top: 10%;
+  position: relative;
+  height: auto;
+  width: 100%;
+  text-align: center;
+}

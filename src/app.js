@@ -17,6 +17,8 @@ import {
   kontaktBlock,
   portfolioBlock
 } from './gsap';
+import 'normalize.css/normalize.css';
+import './styles/styles.scss';
 
 var delayHome = 2.8;
 
