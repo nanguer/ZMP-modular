@@ -7,6 +7,7 @@ var t0 = new TimelineMax(),
   uslugiBlock = new TimelineMax({ paused: true }),
   kontaktBlock = new TimelineMax({ paused: true }),
   portfolioBlock = new TimelineMax({ paused: true }),
+  stripes = new TimelineMax({ paused: true }),
   active = {
     t1: false,
     t2: false,
@@ -69,6 +70,11 @@ bigLogoSwipe.to(
 
   '-=0.5'
 );
+stripes.to('.stripes', 3, {
+  left: '-500px',
+  ease: Expo.easeInOut,
+  delay: 0.2
+});
 bigLogoSwipe.add('Z');
 bigLogoSwipe.to('#bigLogo', 1, {
   left: '5%',
@@ -114,5 +120,6 @@ export {
   historiaBlock,
   uslugiBlock,
   kontaktBlock,
-  portfolioBlock
+  portfolioBlock,
+  stripes
 };

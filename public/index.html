@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div class="stripes"></div>
 
     <div class="container-home">
 
@@ -38,27 +39,27 @@
             </a>
             <div class="menu">
                 <ul>
-                    <li>
-                        <a href="#">
-                            <span class="menu-number">1</span><span class="nav-option" id="home-option">
+                    <li class="menu-number">
+                        <a id="home-option" href="#">
+                            <span class="number selected">01</span><span class="nav-option">
                                 Home</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <span class="menu-number">2</span><span class="nav-option" id="historia-option">
+                    <li class="menu-number">
+                        <a id="historia-option" href="#">
+                            <span class="number">02</span><span class="nav-option">
                                 Nasza
                                 historia</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <span class="menu-number">3</span><span class="nav-option" id="services-option"> Uslugi</span>
+                    <li class="menu-number">
+                        <a id="services-option" href="#">
+                            <span class="number">03</span><span class="nav-option"> Uslugi</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <span class="menu-number">4</span><span class="nav-option" id="kontakt-option"> Kontakt</span>
+                    <li class="menu-number">
+                        <a id="kontakt-option" href="#">
+                            <span class="number">04</span><span class="nav-option"> Kontakt</span>
                         </a>
                     </li>
 
@@ -84,70 +85,71 @@
         </div>
 
         <!-- Soundwave start-->
-        <!-- <svg id="wave" data-name="Layer 1" viewBox="0 0 1280 720" version="1.1"
-              preserveAspectRatio="xMidYMin slice">
-              <path d="m65.9 331h-0.6a3.42 13 0 0 0 -3.1 13v78a3.42 13 0 1 0 6.8 0v-78a3.42 13 0 0 0 -3.1 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
+        <!-- <svg id="wave" data-name="Layer 1" viewBox="0 0 1280 720" version="1.1" preserveAspectRatio="xMidYMin slice">
+            <path d="m65.9 331h-0.6a3.42 13 0 0 0 -3.1 13v78a3.42 13 0 1 0 6.8 0v-78a3.42 13 0 0 0 -3.1 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
                 data-name="Line 1" />
-              <path d="m148 253a3.42 13 0 0 0 -3 13v233a3.66 14 0 1 0 7 0v-233a3.42 13 0 0 0 -3 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
+            <path d="m148 253a3.42 13 0 0 0 -3 13v233a3.66 14 0 1 0 7 0v-233a3.42 13 0 0 0 -3 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
                 data-name="Line 2" />
-              <path d="m230 136h-1a3.41 13 0 0 0 -3 13v467a4 15.3 0 1 0 8 0v-467a3.41 13 0 0 0 -4 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
+            <path d="m230 136h-1a3.41 13 0 0 0 -3 13v467a4 15.3 0 1 0 8 0v-467a3.41 13 0 0 0 -4 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
                 data-name="Line 3" />
-              <path d="m312 266a3.42 13 0 0 0 -3 13v207a3.66 13.9 0 1 0 7 0v-207a3.42 13 0 0 0 -4 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
+            <path d="m312 266a3.42 13 0 0 0 -3 13v207a3.66 13.9 0 1 0 7 0v-207a3.42 13 0 0 0 -4 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
                 data-name="Line 4" />
-              <path d="m394 331a3.42 13 0 0 0 -3 13v78a3.66 13.9 0 0 0 7 0v-78a3.42 13 0 0 0 -4 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
+            <path d="m394 331a3.42 13 0 0 0 -3 13v78a3.66 13.9 0 0 0 7 0v-78a3.42 13 0 0 0 -4 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
                 data-name="Line 5" />
-              <path d="m476 266h-1a3.42 13 0 0 0 -3 13v207a3.66 13.9 0 1 0 7 0v-207a3.42 13 0 0 0 -3 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
+            <path d="m476 266h-1a3.42 13 0 0 0 -3 13v207a3.66 13.9 0 1 0 7 0v-207a3.42 13 0 0 0 -3 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
                 data-name="Line 6" />
-              <path d="m558 136a3.42 13 0 0 0 -3 13v467a3.66 13.9 0 1 0 7 0v-467a3.42 13 0 0 0 -4 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
+            <path d="m558 136a3.42 13 0 0 0 -3 13v467a3.66 13.9 0 1 0 7 0v-467a3.42 13 0 0 0 -4 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
                 data-name="Line 7" />
-              <path d="m640 253a3.42 13 0 0 0 -4 13v233a4 15.2 0 1 0 8 0v-233a3.42 13 0 0 0 -4 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
+            <path d="m640 253a3.42 13 0 0 0 -4 13v233a4 15.2 0 1 0 8 0v-233a3.42 13 0 0 0 -4 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
                 data-name="Line 8" />
-              <path d="m722 331h-1a3.42 13 0 0 0 -3 13v78a3.66 13.9 0 1 0 7 0v-78a3.42 13 0 0 0 -3 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
+            <path d="m722 331h-1a3.42 13 0 0 0 -3 13v78a3.66 13.9 0 1 0 7 0v-78a3.42 13 0 0 0 -3 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
                 data-name="Line 9" />
-              <path d="m591 323h-1a3.42 13 0 0 0 -3 13v78a4 15.2 0 1 0 8 0v-78a3.42 13 0 0 0 -4 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
+            <path d="m591 323h-1a3.42 13 0 0 0 -3 13v78a4 15.2 0 1 0 8 0v-78a3.42 13 0 0 0 -4 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
                 data-name="Line 1" />
-              <path d="m1050 217a25.3 16.3 0 0 0 0 17v292-292a25.3 16.3 0 0 0 0 -17z" style="stroke:#333;stroke-linecap:round;stroke-width:3.247;fill:#333"
+            <path d="m1050 217a25.3 16.3 0 0 0 0 17v292-292a25.3 16.3 0 0 0 0 -17z" style="stroke:#333;stroke-linecap:round;stroke-width:3.247;fill:#333"
                 data-name="Line 2" />
-              <path d="m757 128h-1a3.42 13 0 0 0 -3 13v467a3.66 13.9 0 1 0 7 0v-467a3.42 13 0 0 0 -3 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
+            <path d="m757 128h-1a3.42 13 0 0 0 -3 13v467a3.66 13.9 0 1 0 7 0v-467a3.42 13 0 0 0 -3 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
                 data-name="Line 3" />
-              <path d="m838 258a3.42 13 0 0 0 -3 13v207a4 15.2 0 1 0 8 0v-207a3.42 13 0 0 0 -5 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
+            <path d="m838 258a3.42 13 0 0 0 -3 13v207a4 15.2 0 1 0 8 0v-207a3.42 13 0 0 0 -5 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
                 data-name="Line 4" />
-              <path d="m920 323a3.42 13 0 0 0 -3 13v78a3.66 13.9 0 0 0 7 0v-78a3.42 13 0 0 0 -4 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
+            <path d="m920 323a3.42 13 0 0 0 -3 13v78a3.66 13.9 0 0 0 7 0v-78a3.42 13 0 0 0 -4 -13z" style="stroke:#333;stroke-dasharray:2.046, 4.09199999999999964;stroke-width:2.046;fill:#333"
                 data-name="Line 5" />
-              <path d="m999 258a0.999 13 0 0 0 -1 13v207a1.75 22.8 0 1 0 2 0v-207a1.54 20.1 0 0 0 -1 -13z" style="stroke:#333;stroke-width:1.106;fill:#333"
+            <path d="m999 258a0.999 13 0 0 0 -1 13v207a1.75 22.8 0 1 0 2 0v-207a1.54 20.1 0 0 0 -1 -13z" style="stroke:#333;stroke-width:1.106;fill:#333"
                 data-name="Line 6" />
-              <path d="m1170 245a5.08 35.9 0 0 0 -10 13v233a5 35.3 0 1 0 10 0v-233a1.84 13 0 0 0 0 -13z" style="stroke:#333;stroke-dasharray:1.503, 3.00599999999999978;stroke-width:1.503;fill:#333"
+            <path d="m1170 245a5.08 35.9 0 0 0 -10 13v233a5 35.3 0 1 0 10 0v-233a1.84 13 0 0 0 0 -13z" style="stroke:#333;stroke-dasharray:1.503, 3.00599999999999978;stroke-width:1.503;fill:#333"
                 data-name="Line 8" />
-              <path d="m1240 323a1.57 13 0 0 0 0 13v78-78a1.57 13 0 0 0 0 -13z" style="stroke:#333;stroke-width:1.389;fill:#333"
+            <path d="m1240 323a1.57 13 0 0 0 0 13v78-78a1.57 13 0 0 0 0 -13z" style="stroke:#333;stroke-width:1.389;fill:#333"
                 data-name="Line 9" />
-              <path d="m267 260a0.999 13 0 0 0 -1 13v208a1.75 22.8 0 1 0 2 0v-208a1.54 20.1 0 0 0 -1 -13z" style="stroke:#333;stroke-dasharray:1.106, 2.21200000000000019;stroke-width:1.106;fill:#333"
+            <path d="m267 260a0.999 13 0 0 0 -1 13v208a1.75 22.8 0 1 0 2 0v-208a1.54 20.1 0 0 0 -1 -13z" style="stroke:#333;stroke-dasharray:1.106, 2.21200000000000019;stroke-width:1.106;fill:#333"
                 data-name="Line 6" />
-              <path d="m438 300a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
+            <path d="m438 300a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
                 data-name="Line 6" />
-              <path d="m960 287a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
+            <path d="m960 287a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
                 data-name="Line 6" />
-              <path d="m1200 284a1.06 8.75 0 0 0 0 9v140-140a1.64 13.6 0 0 0 0 -9z" style="stroke:#333;fill:#333" data-name="Line 6" />
-              <path d="m108 287a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
+            <path d="m1200 284a1.06 8.75 0 0 0 0 9v140-140a1.64 13.6 0 0 0 0 -9z" style="stroke:#333;fill:#333"
                 data-name="Line 6" />
-              <path d="m191 290a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
+            <path d="m108 287a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
                 data-name="Line 6" />
-              <path d="m514 299a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
+            <path d="m191 290a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
                 data-name="Line 6" />
-              <path d="m678 285a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
+            <path d="m514 299a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
                 data-name="Line 6" />
-              <path d="m356 296a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
+            <path d="m678 285a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
                 data-name="Line 6" />
-              <path d="m795 293a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
+            <path d="m356 296a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
                 data-name="Line 6" />
-              <path d="m869 291a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
+            <path d="m795 293a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
                 data-name="Line 6" />
-              <path d="m1100 140a3.42 13 0 0 0 0 13v467-467a3.42 13 0 0 0 0 -13z" style="stroke:#333;stroke-width:2.046;fill:#333"
+            <path d="m869 291a1.06 8.75 0 0 0 -1 9v140a1.86 15.4 0 1 0 2 0v-140a1.64 13.6 0 0 0 -1 -9z" style="stroke:#333;stroke-dasharray:0.937, 1.87100000000000000;stroke-width:.937;fill:#333"
+                data-name="Line 6" />
+            <path d="m1100 140a3.42 13 0 0 0 0 13v467-467a3.42 13 0 0 0 0 -13z" style="stroke:#333;stroke-width:2.046;fill:#333"
                 data-name="Line 7" />
-            </svg> -->
+        </svg> -->
         <!-- soundwave end -->
         <div class="section" id="historia">
             <h3>NASZA HISTORIA</h3>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio saepe iste laudantium aliquid deserunt
+            <p class="section__historia"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio saepe iste
+                laudantium aliquid deserunt
                 ad.
                 Optio, sequi nostrum voluptates esse quae porro ipsum ipsam a at fugit quaerat soluta aliquid.
                 Commodi eligendi quas repellendus aperiam! Cum amet dignissimos repellendus molestiae rem, in labore
