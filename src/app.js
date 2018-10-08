@@ -16,12 +16,18 @@ import {
   historiaBlock,
   uslugiBlock,
   kontaktBlock,
-  portfolioBlock
+  portfolioBlock,
+  servicesDetails
 } from './gsap';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
 var delayHome = 2.8;
+let target;
+let bottom = {
+  events: '-5rem',
+  sound: '-7rem'
+};
 
 $('.sidebar').on('click', '#historia-option', function() {
   active.t3 = true;
@@ -123,4 +129,24 @@ $('.home-icon, #home-option').click(function() {
     delay: delayHome
   });
   active.t1 = false;
+});
+
+$('.service__icon-container').on('click', '.services-link', function(e) {
+  active.t7 = true;
+  target = e.delegateTarget.id;
+  TweenMax.to(`#${target}`, 0.5, {
+    bottom: bottom[target],
+    ease: Expo.easeInOut
+  });
+
+  servicesDetails.play();
+});
+$('.serv-sidebar').on('click', '.close-btn-right', function() {
+  active.t7 = false;
+  servicesDetails.reverse();
+  TweenMax.to(`#${target}`, 0.5, {
+    bottom: '-11rem',
+    ease: Expo.easeInOut,
+    delay: 0.5
+  });
 });

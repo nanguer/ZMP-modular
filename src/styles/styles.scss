@@ -5,11 +5,12 @@
 @import './components/uslugi';
 @import './components/kontakt';
 @import './components/portfolio';
+@import './components/serv-sidebar';
 @font-face {
-  font-family: 'LEIXO-DEMO';
-  src: url('../../public/fonts/LEIXO-DEMO.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'LEIXO-DEMO';
+    src: url('../../public/fonts/LEIXO-DEMO.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
@@ -20,8 +21,8 @@
 }
 
 @font-face {
-  font-family: 'Square721BT';
-  src: url('../../public/fonts/Square721BT.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Square721BT';
+    src: url('../../public/fonts/Square721BT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }

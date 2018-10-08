@@ -7,6 +7,7 @@ var t0 = new TimelineMax(),
   uslugiBlock = new TimelineMax({ paused: true }),
   kontaktBlock = new TimelineMax({ paused: true }),
   portfolioBlock = new TimelineMax({ paused: true }),
+  servicesDetails = new TimelineMax({ paused: true }),
   stripes = new TimelineMax({ paused: true }),
   active = {
     t1: false,
@@ -14,7 +15,8 @@ var t0 = new TimelineMax(),
     t3: false,
     t4: false,
     t5: false,
-    t6: false
+    t6: false,
+    t7: false
   };
 
 //NAVIGATION ANIMATION
@@ -105,11 +107,19 @@ kontaktBlock.to('.kontakt__text', 1.2, {
   ease: Expo.easeInOut
 });
 
-portfolioBlock.to('.portfolio-sidebar', 1, {
+portfolioBlock.to('.portfolio-sidebar', 0.6, {
   delay: 0.3,
   display: 'flex',
   opacity: 1,
   x: 290,
+  ease: Expo.easeInOut
+});
+
+servicesDetails.to('.serv-sidebar', 0.6, {
+  delay: 0.3,
+  display: 'flex',
+  opacity: 1,
+  right: 0,
   ease: Expo.easeInOut
 });
 
@@ -121,5 +131,6 @@ export {
   uslugiBlock,
   kontaktBlock,
   portfolioBlock,
+  servicesDetails,
   stripes
 };

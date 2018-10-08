@@ -1,59 +1,91 @@
 .uslugi {
-  color: white;
-  display: none;
-  position: absolute;
-  max-width: 90vw;
-  left: 0;
-  opacity: 0;
-  top: 29vh;
+    color: white;
+    display: none;
+    position: absolute;
+    max-width: 90vw;
+    left: 0;
+    opacity: 0;
+    top: 29vh;
 }
 
 .uslugi__text {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .paragraph {
-  max-width: 30vw;
-  float: left;
+    max-width: 30vw;
+    float: left;
 }
 
 .paragraph p {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .console {
-  border: solid 3px gray;
-  height: 300px;
-  width: 480px;
-  float: right;
-  right: 0;
-  margin-left: 80px;
-  position: relative;
-  display: flex;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+    border: solid 3px gray;
+    height: 300px;
+    width: 480px;
+    float: right;
+    right: 0;
+    margin-left: 80px;
+    margin-right: 1rem;
+    position: relative;
+    display: flex;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .line-container {
-  height: 100%;
-  width: 20%;
-  margin-right: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    margin-right: 0px;
 }
 
 .actual-line {
-  background-color: white;
-  height: 80%;
-  width: 2px;
-  margin: auto;
-  top: 5%;
-  position: relative;
+    background-color: white;
+    height: 17rem;
+    width: 2px;
+    margin: auto;
+    top: 30%;
+    position: fixed;
 }
 
-.number {
-  top: 10%;
-  position: relative;
-  height: auto;
-  width: 100%;
-  text-align: center;
+.service__icon-container {
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 1.2rem;
+    position: relative;
+    background-color: $light-black;
+    margin: 0;
+    bottom: -11rem;
+    z-index: 7;
+}
+
+.service__number {
+    top: 66%;
+    position: relative;
+    width: auto;
+    text-align: center;
+}
+
+.event-icon {
+    margin: 5px 0;
+    fill: $green;
+}
+
+p.service-type {
+    margin: 0;
+    font-size: 12px;
+    color: white;
+}
+
+#sound-icon {
+    fill: $orange;
 }
