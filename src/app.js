@@ -26,7 +26,10 @@ var delayHome = 2.8;
 let target;
 let bottom = {
   events: '-5rem',
-  sound: '-7rem'
+  sound: '-7rem',
+  oswietlenie: '-4rem',
+  ts: '-2rem',
+  proj: '-9rem'
 };
 
 $('.sidebar').on('click', '#historia-option', function() {

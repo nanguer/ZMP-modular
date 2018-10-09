@@ -1,50 +1,50 @@
 * {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 body {
-    font-family: 'OpenSans', 'sans-serif';
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    background-color: $light-black;
+  font-family: 'OpenSans', 'sans-serif';
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: $light-black;
 }
 
 a {
-    text-decoration: none;
-    color: $grey;
+  text-decoration: none;
+  color: $grey;
 }
 
 ul {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 p {
-    color: $grey;
+  color: $grey;
 }
 
 h3 {
-    color: white;
-    font-weight: 700;
+  color: white;
+  font-weight: 700;
 }
 
 h6 {
-    font-family: 'Square721BT';
-    text-align: center;
-    top: 32.5vh;
-    position: absolute;
-    margin: 0.3em auto;
-    left: 35.7vw;
-    right: 40%;
-    color: rgb(220, 220, 220);
+  font-family: 'Square721BT';
+  text-align: center;
+  top: 32.5vh;
+  position: absolute;
+  margin: 0.3em auto;
+  left: 35.7vw;
+  right: 40%;
+  color: rgb(220, 220, 220);
 }
 
 li {
-    padding-bottom: 2rem;
-    width: auto;
+  padding-bottom: 2rem;
+  width: auto;
 }
 
-div>p {
-    font-size: 14px;
+div > p {
+  font-size: 14px;
 }
