@@ -9,6 +9,8 @@ var t0 = new TimelineMax(),
   portfolioBlock = new TimelineMax({ paused: true }),
   servicesDetails = new TimelineMax({ paused: true }),
   stripes = new TimelineMax({ paused: true }),
+  varConsole = new TimelineMax({ paused: true }),
+  uslugiIcons = new TimelineMax({ paused: true }),
   active = {
     t1: false,
     t2: false,
@@ -96,6 +98,21 @@ uslugiBlock.to('#uslugi', 1, {
   left: '15vw',
   ease: Expo.easeInOut
 });
+varConsole.to('.console', 0.5, {
+  opacity: 1,
+  delay: 1,
+  right: 0
+});
+uslugiIcons.staggerFrom(
+  '.service__icon-container',
+  0.5,
+  {
+    opacity: 0,
+    delay: 1.2,
+    ease: Expo.easeOut
+  },
+  0.2
+);
 kontaktBlock.to('.map-container', 0.5, {
   opacity: 1,
   x: -737,
@@ -132,5 +149,7 @@ export {
   kontaktBlock,
   portfolioBlock,
   servicesDetails,
-  stripes
+  stripes,
+  uslugiIcons,
+  varConsole
 };

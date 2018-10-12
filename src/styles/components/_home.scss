@@ -1,109 +1,221 @@
 .stripes {
-  background-image: repeating-linear-gradient(
-    to right,
-    transparent,
-    transparent 218px,
-    grey 2px,
-    grey 219px
-  );
-  display: block;
-  position: absolute;
-  height: 105vh;
-  width: 400vw;
-  background-color: transparent;
-  opacity: 0.14;
-  z-index: 4;
-  overflow: hidden;
-  left: -4235px;
+    background-image: repeating-linear-gradient( to right, transparent, transparent 218px, grey 2px, grey 219px);
+    display: block;
+    position: absolute;
+    height: 105vh;
+    width: 400vw;
+    background-color: transparent;
+    opacity: 0.14;
+    z-index: 4;
+    overflow: hidden;
+    left: -4235px;
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo:before {
+    content: '';
+    position: absolute;
+    width: 220%;
+    height: 175%;
+    top: -32%;
+    opacity: 0;
+    left: -58%;
+    background: url('./images/ZMP-BG.svg');
+    animation: animate 8s linear infinite;
+    mix-blend-mode: hard-light;
 }
 
 #bigLogo {
-  height: 2.2rem;
-  width: 10rem;
-  opacity: 0;
-  position: absolute;
-  margin: auto;
-  left: 44vw;
-  top: 45vh;
-  color: rgb(220, 220, 220);
+    height: 2.2rem;
+    width: 10rem;
+    opacity: 0;
+    position: relative;
+    margin: auto;
+    left: 4vw;
+    top: 4vh;
+    color: rgb(220, 220, 220);
 }
 
 .letter {
-  stroke-width: 1.273;
-  fill: #fff;
+    stroke-width: 1.273;
+    fill: #fff;
 }
 
-div.logo > h2 {
-  font-family: 'LEIXO-DEMO';
-  color: $orange;
-  font-size: 2rem;
-  margin-top: 0px;
-  position: absolute;
-  margin: 30px auto;
-  left: 40.2vw;
-  top: 56vh;
+div.logo>h2 {
+    font-family: 'LEIXO-DEMO';
+    color: $orange;
+    font-size: 2rem;
+    margin-top: 0px;
+    position: relative;
+    margin: 30px auto;
+    left: 0.5vw;
+    top: 10vh;
 }
 
 .subtitles {
-  opacity: 0;
+    opacity: 0;
 }
 
 #wave {
-  position: fixed;
-  left: 50%;
-  top: 44%;
-  right: 0;
-  z-index: -1;
-  max-height: 100vh;
-  min-height: 60vh;
-  transform: translate(-50%, -50%);
+    position: fixed;
+    left: 50%;
+    top: 44%;
+    right: 0;
+    z-index: -1;
+    max-height: 100vh;
+    min-height: 60vh;
+    transform: translate(-50%, -50%);
 }
 
 .sidebar {
-  z-index: 5;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 1.2rem;
-  height: 90vh;
-  top: 2rem;
-  width: 10rem;
+    z-index: 5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1.2rem;
+    height: 90vh;
+    top: 2rem;
+    width: 10rem;
 }
 
 .nav-option {
-  position: absolute;
-  font-weight: 700;
-  opacity: 0;
-  left: -2rem;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  transition: all 0.2s ease;
+    position: absolute;
+    font-weight: 700;
+    opacity: 0;
+    left: -2rem;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease;
 }
 
 .menu-number:hover {
-  .nav-option {
-    opacity: 1;
-    left: 2rem;
-  }
+    .nav-option {
+        opacity: 1;
+        left: 2rem;
+    }
 }
 
 .selected {
-  color: $orange;
-  text-decoration: line-through;
-}
-
-@keyframes strike {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 50%;
-  }
+    color: $orange;
+    text-decoration: line-through;
 }
 
 .portfolio-icon {
-  fill: $orange;
-  margin-right: $sm;
+    fill: $orange;
+    margin-right: $sm;
+}
+
+%container-home-styles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 1;
+    z-index: 5;
+    left: 0;
+}
+
+.container-home {
+    @extend %container-home-styles;
+    opacity: 1;
+}
+
+.container-home:before {
+    @extend %container-home-styles;
+    content: '';
+    animation: animate-bg 8s linear infinite;
+}
+
+@keyframes animate-bg {
+    0% {
+        background: url('./images/glitch.png');
+        background-size: cover;
+        background-position: 0 0;
+        filter: hue-rotate(0deg);
+    }
+    0.4% {
+        background-position: 5px 0;
+        opacity: 0.5;
+    }
+    0.8% {
+        background-position: -5px 0;
+        opacity: 1;
+    }
+    1.2% {
+        background-position: 15px 0;
+    }
+    1.6% {
+        background-position: -5px 0;
+    }
+    2% {
+        background-position: -25px 0;
+    }
+    2.4% {
+        background-position: -50px 0;
+    }
+    2.8% {
+        background-position: 0 -20px;
+    }
+    3.2% {
+        background-position: -60px -20px;
+    }
+    3.24% {
+        background-position: 0 0;
+    }
+    4% {
+        background-position: 0 0;
+        opacity: 0;
+        filter: hue-rotate(360deg);
+        background: none;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+        filter: hue-rotate(0deg);
+    }
+    0.4% {
+        background-position: 5px 0;
+        opacity: 0.5;
+    }
+    0.8% {
+        background-position: -5px 0;
+        opacity: 1;
+    }
+    1.2% {
+        background-position: 15px 0;
+    }
+    1.6% {
+        background-position: -5px 0;
+    }
+    2% {
+        background-position: -25px 0;
+    }
+    2.4% {
+        background-position: -50px 0;
+    }
+    2.8% {
+        background-position: 0 -20px;
+    }
+    3.2% {
+        background-position: -60px -20px;
+    }
+    3.24% {
+        background-position: 0 0;
+    }
+    4% {
+        background-position: 0 0;
+        opacity: 0;
+        filter: hue-rotate(360deg);
+    }
 }

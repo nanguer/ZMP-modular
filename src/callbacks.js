@@ -1,16 +1,16 @@
-import { TimelineMax, TweenMax } from 'gsap';
+import { TimelineMax, TweenMax, Expo } from 'gsap';
 import {
   active,
   historiaBlock,
   uslugiBlock,
+  uslugiIcons,
   subtitlesDisappear,
   kontaktBlock,
-  portfolioBlock
+  portfolioBlock,
+  varConsole
 } from './gsap';
 import $ from 'jquery';
-
 var delay = 0;
-
 function disappearSubtitles() {
   delay = 0;
   subtitlesDisappear.play();
@@ -31,6 +31,8 @@ function disappearHistoria() {
 
 function disappearUslugi() {
   delay = 0.7;
+  uslugiIcons.reverse();
+  varConsole.reverse();
   uslugiBlock.reverse();
   $('#services-option')
     .children('.number')
@@ -49,6 +51,10 @@ function disappearKontakt() {
 
 function showSection(section) {
   section.play();
+  if (section === uslugiBlock) {
+    varConsole.play();
+    uslugiIcons.play();
+  }
 }
 
 export {

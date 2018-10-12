@@ -1,0 +1,5 @@
+@function dasharray($key) {
+  @if map-has-key($dasharray, $key) {
+    @return map-get($dasharray, $key);
+  }
+}

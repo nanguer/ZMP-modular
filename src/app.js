@@ -1,5 +1,4 @@
-import { TimelineMax, TweenMax, Expo } from 'gsap';
-import $ from 'jquery';
+import { TimelineMax, TweenMax, Expo, TweenLite } from 'gsap';
 import {
   delay,
   disappearSubtitles,
@@ -19,6 +18,7 @@ import {
   portfolioBlock,
   servicesDetails
 } from './gsap';
+import './mgGlitch.min.js';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
@@ -151,5 +151,28 @@ $('.serv-sidebar').on('click', '.close-btn-right', function() {
     bottom: '-11rem',
     ease: Expo.easeInOut,
     delay: 0.5
+  });
+});
+
+$(function() {
+  $('.logo').mgGlitch({
+    // set 'true' to stop the plugin
+    destroy: true,
+    // set 'false' to stop glitching
+    glitch: true,
+    // set 'false' to stop scaling
+    scale: true,
+    // set 'false' to stop glitch blending
+    blend: true,
+    // select blend mode type
+    blendModeType: 'difference',
+    // set min time for glitch 1 elem
+    glitch1TimeMin: 800,
+    // set max time for glitch 1 elem
+    glitch1TimeMax: 1200,
+    // set min time for glitch 2 elem
+    glitch2TimeMin: 500,
+    // set max time for glitch 2 elem
+    glitch2TimeMax: 800
   });
 });
