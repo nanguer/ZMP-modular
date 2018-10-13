@@ -57,11 +57,16 @@ function showSection(section) {
   }
 }
 
+function toggleGlitch() {
+  $('.logo').toggleClass('stopped');
+}
+
 export {
   delay,
   disappearSubtitles,
   disappearHistoria,
   disappearUslugi,
   disappearKontakt,
-  showSection
+  showSection,
+  toggleGlitch
 };

@@ -5,7 +5,8 @@ import {
   disappearHistoria,
   disappearUslugi,
   disappearKontakt,
-  showSection
+  showSection,
+  toggleGlitch
 } from './callbacks';
 import {
   active,
@@ -18,7 +19,6 @@ import {
   portfolioBlock,
   servicesDetails
 } from './gsap';
-import './mgGlitch.min.js';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
@@ -34,6 +34,7 @@ let bottom = {
 
 $('.sidebar').on('click', '#historia-option', function() {
   active.t3 = true;
+  toggleGlitch();
   $(this)
     .children('.number')
     .addClass('selected');
@@ -57,6 +58,7 @@ $('.sidebar').on('click', '#historia-option', function() {
 });
 $('.sidebar').on('click', '#services-option', function() {
   active.t4 = true;
+  toggleGlitch();
   $(this)
     .children('.number')
     .addClass('selected');
@@ -80,6 +82,7 @@ $('.sidebar').on('click', '#services-option', function() {
 });
 $('.sidebar').on('click', '#kontakt-option', function() {
   active.t5 = true;
+  toggleGlitch();
   $(this)
     .children('.number')
     .addClass('selected');
@@ -102,16 +105,19 @@ $('.sidebar').on('click', '#kontakt-option', function() {
 });
 $('.sidebar').on('click', '.portfolio-menu', function() {
   active.t6 = true;
+  toggleGlitch();
   portfolioBlock.play();
 });
 $('.portfolio-sidebar').on('click', '.close-btn', function() {
   active.t6 = false;
+  toggleGlitch();
   portfolioBlock.reverse();
 });
 $('.home-icon, #home-option').click(function() {
   $(this)
     .children('.number')
     .addClass('selected');
+  toggleGlitch();
   if (active.t3) {
     disappearHistoria();
     delayHome = 1;
@@ -151,28 +157,5 @@ $('.serv-sidebar').on('click', '.close-btn-right', function() {
     bottom: '-11rem',
     ease: Expo.easeInOut,
     delay: 0.5
-  });
-});
-
-$(function() {
-  $('.logo').mgGlitch({
-    // set 'true' to stop the plugin
-    destroy: true,
-    // set 'false' to stop glitching
-    glitch: true,
-    // set 'false' to stop scaling
-    scale: true,
-    // set 'false' to stop glitch blending
-    blend: true,
-    // select blend mode type
-    blendModeType: 'difference',
-    // set min time for glitch 1 elem
-    glitch1TimeMin: 800,
-    // set max time for glitch 1 elem
-    glitch1TimeMax: 1200,
-    // set min time for glitch 2 elem
-    glitch2TimeMin: 500,
-    // set max time for glitch 2 elem
-    glitch2TimeMax: 800
   });
 });

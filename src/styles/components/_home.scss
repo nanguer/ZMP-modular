@@ -29,7 +29,12 @@
     left: -58%;
     background: url('./images/ZMP-BG.svg');
     animation: animate 8s linear infinite;
+    animation-play-state: running;
     mix-blend-mode: hard-light;
+}
+
+.logo.stopped:before {
+    animation-play-state: paused;
 }
 
 #bigLogo {
