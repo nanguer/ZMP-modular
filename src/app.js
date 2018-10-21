@@ -6,7 +6,7 @@ import {
   disappearUslugi,
   disappearKontakt,
   showSection,
-  toggleGlitch
+  stopGlitch
 } from './callbacks';
 import {
   active,
@@ -21,6 +21,8 @@ import {
 } from './gsap';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import './particles.min.js';
+import './particles-conf.js';
 
 var delayHome = 2.8;
 let target;
@@ -34,7 +36,7 @@ let bottom = {
 
 $('.sidebar').on('click', '#historia-option', function() {
   active.t3 = true;
-  toggleGlitch();
+  stopGlitch();
   $(this)
     .children('.number')
     .addClass('selected');
@@ -58,7 +60,7 @@ $('.sidebar').on('click', '#historia-option', function() {
 });
 $('.sidebar').on('click', '#services-option', function() {
   active.t4 = true;
-  toggleGlitch();
+  stopGlitch();
   $(this)
     .children('.number')
     .addClass('selected');
@@ -82,7 +84,7 @@ $('.sidebar').on('click', '#services-option', function() {
 });
 $('.sidebar').on('click', '#kontakt-option', function() {
   active.t5 = true;
-  toggleGlitch();
+  stopGlitch();
   $(this)
     .children('.number')
     .addClass('selected');
@@ -105,19 +107,19 @@ $('.sidebar').on('click', '#kontakt-option', function() {
 });
 $('.sidebar').on('click', '.portfolio-menu', function() {
   active.t6 = true;
-  toggleGlitch();
+
   portfolioBlock.play();
 });
 $('.portfolio-sidebar').on('click', '.close-btn', function() {
   active.t6 = false;
-  toggleGlitch();
   portfolioBlock.reverse();
 });
 $('.home-icon, #home-option').click(function() {
   $(this)
     .children('.number')
     .addClass('selected');
-  toggleGlitch();
+  $('.logo').removeClass('stopped');
+  $('container-home').css('animation-play-state', 'running');
   if (active.t3) {
     disappearHistoria();
     delayHome = 1;

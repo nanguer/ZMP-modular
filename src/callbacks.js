@@ -57,8 +57,8 @@ function showSection(section) {
   }
 }
 
-function toggleGlitch() {
-  $('.logo').toggleClass('stopped');
+function stopGlitch() {
+  $('.logo').addClass('stopped');
 }
 
 export {
@@ -68,5 +68,5 @@ export {
   disappearUslugi,
   disappearKontakt,
   showSection,
-  toggleGlitch
+  stopGlitch
 };

@@ -138,6 +138,18 @@ div.logo>h2 {
     @extend %container-home-styles;
     content: '';
     animation: animate-bg 8s linear infinite;
+    animation-play-state: running;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $light-black;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 @keyframes animate-bg {
