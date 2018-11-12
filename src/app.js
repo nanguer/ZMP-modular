@@ -21,8 +21,8 @@ import {
 } from './gsap';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
-import './particles.min.js';
-import './particles-conf.js';
+// import './particles.min.js';
+// import './particles-conf.js';
 
 var delayHome = 2.8;
 let target;
