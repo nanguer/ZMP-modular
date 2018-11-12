@@ -24,6 +24,11 @@ import './styles/styles.scss';
 // import './particles.min.js';
 // import './particles-conf.js';
 
+$(window).on("load", function () {
+  $(".preloader").css('display', 'none');
+  $(".container-home").css('display', 'block');
+});
+
 var delayHome = 2.8;
 let target;
 let bottom = {
