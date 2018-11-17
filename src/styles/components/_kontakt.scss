@@ -10,8 +10,7 @@
 .kontakt__container {
   display: flex;
   flex-direction: row;
-  width: 87vw;
-  justify-content: space-between;
+  width: inherit;
 }
 
 .kontakt__text {
@@ -26,9 +25,8 @@
 .map-container {
   opacity: 0;
   position: relative;
-  right: -96vw;
+  right: -60vw;
   height: 100vh;
   width: 45%;
   background: grey;
-  min-width: 400px;
 }

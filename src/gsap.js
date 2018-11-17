@@ -1,4 +1,4 @@
-import { TimelineMax } from 'gsap';
+import { TimelineMax, TweenMax } from 'gsap';
 
 var t0 = new TimelineMax(),
   subtitlesDisappear = new TimelineMax({ paused: true }),
@@ -115,7 +115,7 @@ uslugiIcons.staggerFrom(
 );
 kontaktBlock.to('.map-container', 0.5, {
   opacity: 1,
-  right: '0vw',
+  x: -737,
   ease: Expo.easeInOut
 });
 kontaktBlock.to('.kontakt__text', 1.2, {
