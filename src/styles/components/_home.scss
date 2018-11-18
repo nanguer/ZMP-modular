@@ -8,7 +8,7 @@
     opacity: 0.14;
     z-index: 4;
     overflow: hidden;
-    left: -4235px;
+    left: -300vw;
 }
 
 .logo {
@@ -17,6 +17,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 1;
+    animation: opanimate 8s linear infinite;
 }
 
 .logo:before {
@@ -234,5 +236,14 @@ div.logo>h2 {
         background-position: 0 0;
         opacity: 0;
         filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes opanimate {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 1;
     }
 }

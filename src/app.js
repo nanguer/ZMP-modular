@@ -107,8 +107,13 @@ $('.sidebar').on('click', '#kontakt-option', function() {
 });
 $('.sidebar').on('click', '.portfolio-menu', function() {
   active.t6 = true;
-
-  portfolioBlock.play();
+  if (active.t5) {
+    active.t5 = false;
+    kontaktBlock.reverse();
+    portfolioBlock.play();
+  } else {
+    portfolioBlock.play();
+  }
 });
 $('.portfolio-sidebar').on('click', '.close-btn', function() {
   active.t6 = false;
