@@ -139,10 +139,10 @@ p.service-type {
     width: 67px;
     stroke: $aquamarine;
     position: absolute;
-    left: 0.6vw;
-    stroke-width: -1rem;
-    bottom: 1.9vh;
-    stroke-dasharray: 2016;
+    left: 6px;
+    stroke-width: 5px;
+    bottom: 20px;
+    stroke-dasharray: 1771;
 }
 
 #ts-icon {
@@ -151,8 +151,8 @@ p.service-type {
 
 #ts-icon__animate {
     width: 67px;
-    left: 0.6vw;
-    bottom: 2.1vh;
+    left: 7px;
+    bottom: 24px;
     fill: none;
     stroke: $violet;
     stroke-width: 5px;
@@ -166,8 +166,8 @@ p.service-type {
 #proj-icon__animate {
     position: absolute;
     width: 57px;
-    left: 1vw;
-    bottom: 1.1vh;
+    left: 12px;
+    bottom: 11px;
     fill: none;
     stroke: $red;
     stroke-width: 3px;

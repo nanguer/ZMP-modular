@@ -115,7 +115,7 @@ uslugiIcons.staggerFrom(
 );
 kontaktBlock.to('.map-container', 0.5, {
   opacity: 1,
-  x: -737,
+  right: '0',
   ease: Expo.easeInOut
 });
 kontaktBlock.to('.kontakt__text', 1.2, {
