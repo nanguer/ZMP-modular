@@ -2,22 +2,137 @@
 
 </body>
     <div class="preloader">
-    <img src="../public/images/loading.gif">
-    <style>
-        .preloader {
-            display: block;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 99;
+        <svg version="1.1" class="logoHomeIcon heartbeat" viewBox="0 0 276 207" xmlns="http://www.w3.org/2000/svg">
+            <g transform="matrix(.249 0 0 .249 1 1)" data-name="Warstwa 2">
+                <g data-name="Warstwa 1">
+                    <path id="bigLeft" d="m243 705h473l84 117h-800q160-200 321-400v-23l-320-399 151-0.24 327 399v22q-118 142-236 284z" style="fill:#fff"/>
+                    <path id="bigRight" d="m302 0h798l-319 400v23l319 399h-150q-164-200-327-399v-22l236-284h-473" style="fill:#fff"/>
+                    <path id="orangeUp" d="m860 117-237 284v22l-19-22v-15l203-242h-402l-19-27z" style="fill:#f15a29"/>
+                    <path id="orangeDown" d="m243 705 236-284v-22l19 21v16l-202 242h402l18 27z" style="fill:#f15a29"/>
+
+
+                    <path d="m479 399 19 21" style="fill:none;stroke-miterlimit:10;stroke-width:.01px;stroke:#ed1c24"/>
+                </g>
+            </g>
+        </svg>
+         <div class="ldBar label-bottom-center" data-value="0" data-preset="energy">
+    </div>
+        <style>
+            .preloader {
+                opacity:1;
+                display: inline;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 99;
+                
+            }
+            .ldBar {
+                font-family: 'arial';
+                color: white;
+                font-size: 14px;
+                position: absolute;
+                top: 120%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .container-home {
+                opacity:0;
+                display: none;
+            }
+            .heartbeat {
+                -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+                animation: heartbeat 1.5s ease-in-out infinite both;
+            }
+            .ldBar-label {
+                text-align: center;
+            }
+            @-webkit-keyframes heartbeat {
+            from {
+                -webkit-filter: blur(12px);
+                filter: blur(12px);
+                opacity: 0;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-transform-origin: center center;
+                transform-origin: center center;
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+            10% {
+                -webkit-transform: scale(0.91);
+                transform: scale(0.91);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+            17% {
+                -webkit-transform: scale(0.98);
+                transform: scale(0.98);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+            33% {
+                -webkit-transform: scale(0.87);
+                transform: scale(0.87);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+            45% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+                -webkit-filter: blur(0px);
+                filter: blur(0px);
+                opacity: 1;
+            }
         }
-        .container-home {
-            display: none;
+
+        @keyframes heartbeat {
+            from {
+                -webkit-filter: blur(12px);
+                filter: blur(12px);
+                opacity: 0;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-transform-origin: center center;
+                transform-origin: center center;
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+            10% {
+                -webkit-transform: scale(0.91);
+                transform: scale(0.91);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+            17% {
+                -webkit-transform: scale(0.98);
+                transform: scale(0.98);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+            33% {
+                -webkit-transform: scale(0.87);
+                transform: scale(0.87);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+            45% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+                -webkit-filter: blur(0px);
+                filter: blur(0px);
+                opacity: 1;
+            }
         }
-    </style>
+        </style>
     
     </div>
+
 <div class="stripes"></div>
 <div id="particles-js"></div>
     <div class="container-home">
@@ -25,7 +140,7 @@
     <div class="logo">
     <h6 class="subtitles" id="header">AUDIO · LIGHT · EVENTS</h6>
 
-    <svg id="bigLogo" height="473" width="1850" version="1.1" viewBox="0 0 491 125">
+    <svg class="asset" id="bigLogo" height="473" width="1850" version="1.1" viewBox="0 0 491 125">
         <g transform="translate(-21.7,54.1)">
             <g aria-label="Z M P" style="font-variant-numeric:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-feature-settings:normal"
                 transform="translate(-.939 -57.2)">
@@ -46,6 +161,45 @@
 <%- include components/portfolio %>
 <%- include components/serv-sidebar %>
 
+
+<script>
+        
+    const bar2 = document.querySelector('.ldBar');
+    const assets = document.getElementsByClassName("asset");
+    const b = new ldBar(bar2);
+    const interval = setInterval(checkLoading, 20);
+    let perc = 0;
+    let assetCounter = 0;
+
+    for (let i = 0; i < assets.length; i++) {
+        assets[i].addEventListener("load", function () {
+            assetCounter++;
+        });
+    };
+
+    function checkLoading() {
+
+        perc = (assetCounter * 100) / assets.length;
+        b.set(perc);
+        console.log(perc);
+        if(assetCounter === assets.length){
+            clearInterval(interval);
+            setTimeout(function() {
+                let preloader = document.getElementsByClassName("preloader");
+                let container = document.getElementsByClassName("container-home");
+                preloader[0].style.opacity = 0;
+                preloader[0].style.display = "none"; 
+                            
+                setTimeout(function() {
+                    container[0].style.opacity=1;
+                    container[0].style.display = "block";
+                    }, 200);
+                }, 100);           
+        };
+    };
+
+
+</script>
 </body>
 
 </html>
