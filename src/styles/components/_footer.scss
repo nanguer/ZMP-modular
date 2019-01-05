@@ -1,0 +1,26 @@
+.icons {
+    position: relative;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    z-index: 5;
+}
+
+.icon {
+    margin: 0 5px;
+    height: 3rem;
+    width: 3rem;
+}
+
+a {
+    fill: $grey;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    fill: $orange;
+}

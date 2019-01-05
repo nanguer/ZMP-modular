@@ -68,7 +68,7 @@ bigLogoSwipe.to(
     opacity: 0.1,
     transform: 'scale(12)',
     ease: ExpoScaleEase.config(1, 12),
-    left: '85%',
+    left: '270%',
     delay: 0.7
   },
 
@@ -81,7 +81,7 @@ stripes.to('.stripes', 3, {
 });
 bigLogoSwipe.add('Z');
 bigLogoSwipe.to('#bigLogo', 1, {
-  left: '5%',
+  left: '-295%',
   ease: Linear.ease,
   delay: 0.5
 });
