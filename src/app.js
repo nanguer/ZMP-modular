@@ -150,6 +150,14 @@ $('.home-icon, #home-option').click(function() {
 $('.service__icon-container').on('click', '.services-link', function(e) {
   active.t7 = true;
   target = e.delegateTarget.id;
+  switch (target) {
+    case 'events':
+      $('.events-template').css('display', 'block');
+      break;
+    case 'sound':
+      $('.sound-template').css('display', 'block');
+      break;
+  }
   TweenMax.to(`#${target}`, 0.5, {
     bottom: bottom[target],
     ease: Expo.easeInOut

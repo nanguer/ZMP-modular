@@ -10,6 +10,7 @@ import {
   varConsole
 } from './gsap';
 import $ from 'jquery';
+
 var delay = 0;
 function disappearSubtitles() {
   delay = 0;
