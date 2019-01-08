@@ -147,15 +147,46 @@ $('.home-icon, #home-option').click(function() {
   active.t1 = false;
 });
 
+//services sidebar show logic, this needs to be improved.
 $('.service__icon-container').on('click', '.services-link', function(e) {
   active.t7 = true;
   target = e.delegateTarget.id;
   switch (target) {
     case 'events':
       $('.events-template').css('display', 'block');
+      $('.sound-template').css('display', 'none');
+      $('.oswietlenie-template').css('display', 'none');
+      $('.ts-template').css('display', 'none');
+      $('.3d-template').css('display', 'none');
       break;
     case 'sound':
       $('.sound-template').css('display', 'block');
+      $('.events-template').css('display', 'none');
+      $('.oswietlenie-template').css('display', 'none');
+      $('.ts-template').css('display', 'none');
+      $('.3d-template').css('display', 'none');
+      break;
+    case 'oswietlenie':
+      $('.oswietlenie-template').css('display', 'block');
+      $('.sound-template').css('display', 'none');
+      $('.events-template').css('display', 'none');
+      $('.ts-template').css('display', 'none');
+      $('.3d-template').css('display', 'none');
+      break;
+    case 'ts':
+      $('.ts-template').css('display', 'block');
+      $('.sound-template').css('display', 'none');
+      $('.events-template').css('display', 'none');
+      $('.oswietlenie-template').css('display', 'none');
+      $('.3d-template').css('display', 'none');
+      break;
+    case 'proj':
+      $('.oswietlenie-template').css('display', 'none');
+      $('.sound-template').css('display', 'none');
+      $('.events-template').css('display', 'none');
+      $('.ts-template').css('display', 'none');
+      $('.3d-template').css('display', 'block');
+
       break;
   }
   TweenMax.to(`#${target}`, 0.5, {
