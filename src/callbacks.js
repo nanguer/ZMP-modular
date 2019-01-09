@@ -58,6 +58,15 @@ function showSection(section) {
   }
 }
 
+function displayService(target){
+      $('.sound-template').css('display', 'none');
+      $('.oswietlenie-template').css('display', 'none');
+      $('.ts-template').css('display', 'none');
+      $('.threed-template').css('display', 'none');
+      $('.events-template').css('display', 'none');
+      $(`.${target}-template`).css('display', 'block');
+};
+
 function stopGlitch() {
   $('.logo').addClass('stopped');
 }
@@ -68,6 +77,7 @@ export {
   disappearHistoria,
   disappearUslugi,
   disappearKontakt,
+  displayService,
   showSection,
   stopGlitch
 };
