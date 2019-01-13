@@ -1,0 +1,19 @@
+.threed-title {
+  color: $red;
+}
+
+ul.threed-list li {
+  display: flex;
+  padding: 0;
+}
+
+ul.threed-list li div {
+  margin-left: 10px;
+}
+
+.threed-list__points {
+  font-size: 22px;
+  color: $red;
+  margin: 7px 0 0;
+  font-style: italic;
+}
