@@ -30,4 +30,10 @@
     width: 40%;
     background: grey;
     right: -33%;
+    z-index: 5;
+}
+
+#map {
+    width: initial;
+    height: inherit;
 }
