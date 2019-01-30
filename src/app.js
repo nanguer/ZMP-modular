@@ -1,5 +1,7 @@
 import { TweenMax, Expo } from 'gsap';
 import {
+  openServices,
+  closeServices,
   delay,
   disappearSubtitles,
   disappearHistoria,
@@ -26,14 +28,6 @@ import './styles/styles.scss';
 // import './particles-conf.js';
 
 var delayHome = 2.8;
-let target;
-let bottom = {
-  events: '-5rem',
-  sound: '-7rem',
-  oswietlenie: '-4rem',
-  ts: '-2rem',
-  threed: '-9rem'
-};
 
 $('.sidebar').on('click', '#historia-option', function() {
   active.t3 = true;
@@ -149,22 +143,14 @@ $('.home-icon, #home-option').click(function() {
 });
 
 $('.service__icon-container').on('click', '.services-link', function(e) {
-  active.t7 = true;
-  target = e.delegateTarget.id;
-  displayService(target);
-  TweenMax.to(`#${target}`, 0.5, {
-    bottom: bottom[target],
-    ease: Expo.easeInOut
-  });
-
+  openServices(e);
   servicesDetails.play();
 });
+
 $('.serv-sidebar').on('click', '.close-btn-right', function() {
-  active.t7 = false;
-  servicesDetails.reverse();
-  TweenMax.to(`#${target}`, 0.5, {
-    bottom: '-11rem',
-    ease: Expo.easeInOut,
-    delay: 0.5
-  });
+  closeServices();
 });
+
+document.onclick = function(event) {
+  console.log(event.target.classList);
+};
