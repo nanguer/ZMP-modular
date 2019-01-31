@@ -151,6 +151,9 @@ $('.serv-sidebar').on('click', '.close-btn-right', function() {
   closeServices();
 });
 
-document.onclick = function(event) {
-  console.log(event.target.classList);
-};
+$(document).mouseup(function(event) {
+  var container = $('.serv-sidebar');
+  if (!container.is(event.target) && container.has(event.target).length === 0) {
+    closeServices();
+  }
+});
