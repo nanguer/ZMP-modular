@@ -152,8 +152,10 @@ $('.serv-sidebar').on('click', '.close-btn-right', function() {
 });
 
 $(document).mouseup(function(event) {
-  var container = $('.serv-sidebar');
-  if (!container.is(event.target) && container.has(event.target).length === 0) {
+  let serv-sidebar = $('.serv-sidebar');
+  
+  if (!serv-sidebar.is(event.target) && serv-sidebar.has(event.target).length === 0) {
     closeServices();
   }
+
 });
