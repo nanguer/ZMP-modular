@@ -2,6 +2,8 @@ import { TweenMax, Expo } from 'gsap';
 import {
   openServices,
   closeServices,
+  closeSidebarsIfActives,
+  closePortfolio,
   delay,
   disappearSubtitles,
   disappearHistoria,
@@ -111,8 +113,7 @@ $('.sidebar').on('click', '.portfolio-menu', function() {
   }
 });
 $('.portfolio-sidebar').on('click', '.close-btn', function() {
-  active.t6 = false;
-  portfolioBlock.reverse();
+  closePortfolio();
 });
 $('.home-icon, #home-option').click(function() {
   $(this)
@@ -152,10 +153,5 @@ $('.serv-sidebar').on('click', '.close-btn-right', function() {
 });
 
 $(document).mouseup(function(event) {
-  let serv-sidebar = $('.serv-sidebar');
-  
-  if (!serv-sidebar.is(event.target) && serv-sidebar.has(event.target).length === 0) {
-    closeServices();
-  }
-
+  closeSidebarsIfActives(event);
 });

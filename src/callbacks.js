@@ -22,6 +22,28 @@ let bottom = {
   threed: '-9rem'
 };
 
+function closePortfolio() {
+  active.t6 = false;
+  portfolioBlock.reverse();
+}
+
+function closeSidebarsIfActives(event) {
+  let servSidebar = $('.serv-sidebar');
+  let portSidebar = $('.portfolio-sidebar');
+  if (
+    !servSidebar.is(event.target) &&
+    servSidebar.has(event.target).length === 0
+  ) {
+    closeServices();
+  }
+  if (
+    !portSidebar.is(event.target) &&
+    portSidebar.has(event.target).length === 0
+  ) {
+    closePortfolio();
+  }
+}
+
 function disappearSubtitles() {
   delay = 0;
   subtitlesDisappear.play();
@@ -103,6 +125,8 @@ function stopGlitch() {
 
 export {
   closeServices,
+  closeSidebarsIfActives,
+  closePortfolio,
   openServices,
   delay,
   disappearSubtitles,
