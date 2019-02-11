@@ -1,6 +1,7 @@
 import { TimelineMax, TweenMax, Expo } from 'gsap';
 import {
   active,
+  bigLogoSwipe,
   historiaBlock,
   uslugiBlock,
   uslugiIcons,
@@ -8,12 +9,14 @@ import {
   kontaktBlock,
   portfolioBlock,
   servicesDetails,
+  stripes,
   varConsole
 } from './gsap';
 import $ from 'jquery';
 
 let target;
 var delay = 0;
+var delayHome = 2.8;
 let bottom = {
   events: '-5rem',
   sound: '-7rem',
@@ -82,6 +85,43 @@ function disappearKontakt() {
   active.t5 = false;
 }
 
+function goHome(select) {
+  select.children('.number').addClass('selected');
+  $('.logo').removeClass('stopped');
+  $('container-home').css('animation-play-state', 'running');
+  if (active.t3) {
+    disappearHistoria();
+    delayHome = 1;
+  } else if (active.t4) {
+    disappearUslugi();
+    delayHome = 1.5;
+  } else if (active.t5) {
+    disappearKontakt();
+    delayHome = 3;
+  }
+  stripes.tweenTo('0', {
+    delay: delay * 1.2
+  });
+  bigLogoSwipe.tweenTo('0', {
+    delay: delay
+  });
+  subtitlesDisappear.tweenTo('0', {
+    delay: delayHome
+  });
+  active.t1 = false;
+}
+
+function openPortfolio() {
+  active.t6 = true;
+  if (active.t5) {
+    active.t5 = false;
+    kontaktBlock.reverse();
+    portfolioBlock.play();
+  } else {
+    portfolioBlock.play();
+  }
+}
+
 function openServices(e) {
   active.t7 = true;
   target = e.delegateTarget.id;
@@ -134,6 +174,8 @@ export {
   disappearUslugi,
   disappearKontakt,
   displayService,
+  goHome,
+  openPortfolio,
   showSection,
   stopGlitch
 };

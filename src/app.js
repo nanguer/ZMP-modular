@@ -10,6 +10,8 @@ import {
   disappearUslugi,
   disappearKontakt,
   displayService,
+  goHome,
+  openPortfolio,
   showSection,
   stopGlitch
 } from './callbacks';
@@ -28,8 +30,6 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 // import './particles.min.js';
 // import './particles-conf.js';
-
-var delayHome = 2.8;
 
 $('.sidebar').on('click', '#historia-option', function() {
   active.t3 = true;
@@ -103,44 +103,13 @@ $('.sidebar').on('click', '#kontakt-option', function() {
   });
 });
 $('.sidebar').on('click', '.portfolio-menu', function() {
-  active.t6 = true;
-  if (active.t5) {
-    active.t5 = false;
-    kontaktBlock.reverse();
-    portfolioBlock.play();
-  } else {
-    portfolioBlock.play();
-  }
+  openPortfolio();
 });
 $('.portfolio-sidebar').on('click', '.close-btn', function() {
   closePortfolio();
 });
 $('.home-icon, #home-option').click(function() {
-  $(this)
-    .children('.number')
-    .addClass('selected');
-  $('.logo').removeClass('stopped');
-  $('container-home').css('animation-play-state', 'running');
-  if (active.t3) {
-    disappearHistoria();
-    delayHome = 1;
-  } else if (active.t4) {
-    disappearUslugi();
-    delayHome = 1.5;
-  } else if (active.t5) {
-    disappearKontakt();
-    delayHome = 3;
-  }
-  stripes.tweenTo('0', {
-    delay: delay * 1.2
-  });
-  bigLogoSwipe.tweenTo('0', {
-    delay: delay
-  });
-  subtitlesDisappear.tweenTo('0', {
-    delay: delayHome
-  });
-  active.t1 = false;
+  goHome($(this));
 });
 
 $('.service__icon-container').on('click', '.services-link', function(e) {
