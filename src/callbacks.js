@@ -111,6 +111,55 @@ function goHome(select) {
   active.t1 = false;
 }
 
+function openHistory(select) {
+  active.t3 = true;
+  stopGlitch();
+  select
+    .children('.number')
+    .addClass('selected');
+  if (!active.t1) {
+    disappearSubtitles();
+  } else if (active.t4) {
+    disappearUslugi();
+  } else if (active.t5) {
+    disappearKontakt();
+  }
+  bigLogoSwipe.tweenTo('Z', {
+    delay: delay * 1.3,
+    ease: Linear.easeOut,
+    onComplete: showSection,
+    onCompleteParams: [historiaBlock]
+  });
+  stripes.tweenTo(1.3, {
+    delay: delay * 1.3,
+    ease: Expo.easeInOut
+  });
+}
+
+function openKontakt(select) {
+  active.t5 = true;
+  stopGlitch();
+  select
+    .children('.number')
+    .addClass('selected');
+  if (!active.t1) {
+    disappearSubtitles();
+  } else if (active.t3) {
+    disappearHistoria();
+  } else if (active.t4) {
+    disappearUslugi();
+  }
+  bigLogoSwipe.tweenTo('P', {
+    delay: delay,
+    onComplete: showSection,
+    onCompleteParams: [kontaktBlock]
+  });
+  stripes.tweenTo(3, {
+    delay: delay * 1.2,
+    ease: Expo.easeInOut
+  });
+}
+
 function openPortfolio() {
   active.t6 = true;
   if (active.t5) {
@@ -128,6 +177,31 @@ function openServices(e) {
   displayService(target);
   TweenMax.to(`#${target}`, 0.5, {
     bottom: bottom[target],
+    ease: Expo.easeInOut
+  });
+}
+
+function openServicesPage() {
+    active.t4 = true;
+  stopGlitch();
+  $(this)
+    .children('.number')
+    .addClass('selected');
+  if (!active.t1) {
+    disappearSubtitles();
+  } else if (active.t3) {
+    disappearHistoria();
+  } else if (active.t5) {
+    disappearKontakt();
+  }
+  bigLogoSwipe.tweenTo(1.5, {
+    delay: delay,
+    ease: Linear.ease,
+    onComplete: showSection,
+    onCompleteParams: [uslugiBlock]
+  });
+  stripes.tweenTo(2, {
+    delay: delay * 1.2,
     ease: Expo.easeInOut
   });
 }
@@ -168,6 +242,7 @@ export {
   closeSidebarsIfActives,
   closePortfolio,
   openServices,
+  openServicesPage,
   delay,
   disappearSubtitles,
   disappearHistoria,
@@ -175,7 +250,9 @@ export {
   disappearKontakt,
   displayService,
   goHome,
+  openHistory,
   openPortfolio,
+  openKontakt,
   showSection,
   stopGlitch
 };

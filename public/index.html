@@ -152,7 +152,7 @@
     <div class="logo">
     <h6 class="subtitles" id="header">AUDIO · LIGHT · EVENTS</h6>
 
-    <svg class="asset" id="bigLogo" height="473" width="1850" version="1.1" viewBox="0 0 491 125">
+    <svg id="bigLogo" height="473" width="1850" version="1.1" viewBox="0 0 491 125">
         <g transform="translate(-21.7,54.1)">
             <g aria-label="Z M P" style="font-variant-numeric:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-feature-settings:normal" transform="translate(-.939 -57.2)">
                 <path class="letter" d="m26.8 23.4c-0.8 0-1.6-0.3-2.3-0.9-0.6-0.7-0.9-1.4-0.9-2.3v-13.9c0-0.95 0.3-1.73 0.9-2.32 0.7-0.71 1.5-1.07 2.3-1.07h88.2c2 0.16 4 1.55 4 3.39v13.9c0 0.9 0 1.6-1 2.3-1 0.6-2 0.9-3 0.9zm7.1 104.6c-4.8-1-6.2-4-8.2-7-0.8-2-2.8-5-2.8-7s0.7-4 2.1-5c11.5-12.3 23.2-25 35-37.9 11.9-13 20-21.9 24.4-26.8 0.6-0.6 1.4-0.9 2.4-0.9 0.9 0 1.6 0.3 2.1 0.9l13.1 11.1s1 1.3 1 2.1c0 1-1 2.5-1 2.5l-43.8 44c-1.2 1-1.8 2-1.8 3s1.2 1 3.6 1l55-1c1 0 2 0 3 1s1 2 1 3v14c0 1 0 1-1 2s-2 1-3 1z"/>
@@ -168,7 +168,7 @@
 <div class="sidebar">
 <a class="home-icon" href="#">
 <div class="homeIconDiv">
-    <svg version="1.1" class="asset logoHomeIcon" viewBox="0 0 276 207" xmlns="http://www.w3.org/2000/svg">
+    <svg version="1.1" class="logoHomeIcon" viewBox="0 0 276 207" xmlns="http://www.w3.org/2000/svg">
     <title>Zasób 1our story</title>
         <g transform="matrix(.249 0 0 .249 1 1)" data-name="Warstwa 2">
             <g data-name="Warstwa 1">
@@ -183,7 +183,7 @@
         </g>
         
     </svg>
-    <svg version="1.1" class="asset zmpSmall" viewBox="0 0 138 66.4" xmlns="http://www.w3.org/2000/svg">
+    <svg version="1.1" class= "zmpSmall" viewBox="0 0 138 66.4" xmlns="http://www.w3.org/2000/svg">
         <g transform="matrix(.284 0 0 .284 -88.1 -50.3)" data-name="Warstwa 2">
             <g data-name="Warstwa 1">
                 <g transform="translate(386,270)" style="fill:#6d6e71" aria-label="Z M P">
@@ -232,7 +232,7 @@
 <div class="portfolio-menu">
     <a href="#">
         <?xml version="1.0" encoding="UTF-8"?>
-        <svg class="asset portfolio-icon" height="1.2em" viewBox="0 0 789.08 692.31">
+        <svg class="portfolio-icon" height="1.2em" viewBox="0 0 789.08 692.31">
             <title>Zasób 2our story</title>
             <g data-name="Warstwa 2">
                 <g data-name="Warstwa 1">
@@ -759,7 +759,7 @@
     const bar2 = document.querySelector('.ldBar');
     const assets = document.getElementsByClassName("asset");
     const b = new ldBar(bar2);
-    const interval = setInterval(checkLoading, 20);
+    let interval = setInterval(checkLoading, 20);
     let perc = 0;
     let assetCounter = 0;
 
