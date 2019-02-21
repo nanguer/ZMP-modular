@@ -1,9 +1,11 @@
 const path = require('path');
 var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-  mode: 'development',
+  mode: devMode ? 'development' : 'production',
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'public', 'dist'),
@@ -13,6 +15,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: '../index.html',
       template: './views/template.ejs'
+    }),
+    new MiniCssExtractPlugin({
+      
+      filename: "style.css"
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -39,7 +45,11 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        use: ['style-loader', 'css-loader?url=false', 'sass-loader']
+        use: [
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { url: false, sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } }
+          ]
       },
 
       {
