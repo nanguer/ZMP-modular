@@ -1,7 +1,7 @@
 const path = require('path');
 var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
@@ -17,8 +17,7 @@ module.exports = {
       template: './views/template.ejs'
     }),
     new MiniCssExtractPlugin({
-      
-      filename: "style.css"
+      filename: './styles/style.css'
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -46,10 +45,16 @@ module.exports = {
       {
         test: /\.s?css$/,
         use: [
-          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            }
+          },
+
           { loader: 'css-loader', options: { url: false, sourceMap: true } },
           { loader: 'sass-loader', options: { sourceMap: true } }
-          ]
+        ]
       },
 
       {
@@ -66,7 +71,7 @@ module.exports = {
     ]
   },
 
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'inline-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     watchContentBase: true
