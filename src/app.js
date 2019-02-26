@@ -2,13 +2,11 @@ __webpack_public_path__ = './dist/';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
-
-// import './particles.min.js';
-// import './particles-conf.js';
+import './particles.min.js';
+import './particles-conf.js';
 
 let lazyLoadChunk = () => {
   import(/* webpackChunkName: "callbacks" */ './callbacks').then(module => {
-    console.log(module);
     $('.sidebar').on('click', '#historia-option', function() {
       module.openHistory($(this));
     });
