@@ -9,7 +9,8 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'public', 'dist'),
-    filename: 'bundle.js'
+    chunkFilename: './scripts/[name].bundle.js',
+    filename: './scripts/[name].bundle.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -17,7 +18,7 @@ module.exports = {
       template: './views/template.ejs'
     }),
     new MiniCssExtractPlugin({
-      filename: './styles/style.css'
+      filename: 'styles/style.css'
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',

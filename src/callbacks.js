@@ -114,9 +114,7 @@ function goHome(select) {
 function openHistory(select) {
   active.t3 = true;
   stopGlitch();
-  select
-    .children('.number')
-    .addClass('selected');
+  select.children('.number').addClass('selected');
   if (!active.t1) {
     disappearSubtitles();
   } else if (active.t4) {
@@ -139,9 +137,7 @@ function openHistory(select) {
 function openKontakt(select) {
   active.t5 = true;
   stopGlitch();
-  select
-    .children('.number')
-    .addClass('selected');
+  select.children('.number').addClass('selected');
   if (!active.t1) {
     disappearSubtitles();
   } else if (active.t3) {
@@ -179,10 +175,11 @@ function openServices(e) {
     bottom: bottom[target],
     ease: Expo.easeInOut
   });
+  servicesDetails.play();
 }
 
 function openServicesPage() {
-    active.t4 = true;
+  active.t4 = true;
   stopGlitch();
   $(this)
     .children('.number')
