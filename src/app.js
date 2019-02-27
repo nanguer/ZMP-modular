@@ -5,7 +5,9 @@ import './styles/styles.scss';
 import './particles.min.js';
 import './particles-conf.js';
 
-let lazyLoadChunk = () => {
+lazyLoadChunk();
+
+function lazyLoadChunk() {
   import(/* webpackChunkName: "callbacks" */ './callbacks').then(module => {
     $('.sidebar').on('click', '#historia-option', function() {
       module.openHistory($(this));
@@ -38,6 +40,4 @@ let lazyLoadChunk = () => {
       module.closeSidebarsIfActives(event);
     });
   });
-};
-
-lazyLoadChunk();
+}

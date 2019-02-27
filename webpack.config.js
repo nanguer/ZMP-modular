@@ -2,6 +2,7 @@ const path = require('path');
 var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
@@ -71,7 +72,9 @@ module.exports = {
       }
     ]
   },
-
+  optimization: {
+    minimizer: [new UglifyJsPlugin()]
+  },
   devtool: 'inline-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'public'),
