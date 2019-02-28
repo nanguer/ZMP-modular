@@ -773,8 +773,8 @@
 
         perc = (assetCounter * 100) / assets.length;
         b.set(perc);
-        console.log(perc);
-        if(assetCounter === assets.length){
+        if(assetCounter === assets.length || assetCounter === assets.length -1){
+            b.set(100);
             clearInterval(interval);
             setTimeout(function() {
                 let preloader = document.getElementsByClassName("preloader");

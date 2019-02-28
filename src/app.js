@@ -1,4 +1,5 @@
 __webpack_public_path__ = './dist/';
+let apiKey;
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
