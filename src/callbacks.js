@@ -1,4 +1,4 @@
-import { TimelineMax, TweenMax, Expo } from 'gsap';
+import { TweenMax, Expo } from 'gsap';
 import {
   active,
   bigLogoSwipe,

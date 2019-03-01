@@ -68,7 +68,7 @@ bigLogoSwipe.to(
     opacity: 0.1,
     transform: 'scale(12)',
     ease: ExpoScaleEase.config(1, 12),
-    left: '115%',
+    left: '100%',
     delay: 0.7
   },
 
