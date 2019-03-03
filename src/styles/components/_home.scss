@@ -41,14 +41,17 @@
 }
 
 #bigLogo {
+    width: 68px;
     height: 110px;
-    width: 150px;
     opacity: 0;
     position: relative;
     margin: 5% 25% 5%;
     left: -2vw;
     top: 4vh;
     color: rgb(220, 220, 220);
+    @media (min-width: $desktop-breakpoint) {
+        width: 150px;
+    }
 }
 
 .letter {

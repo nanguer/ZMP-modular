@@ -1,66 +1,80 @@
 .logoHomeIcon {
-  height: 5rem;
-  position: relative;
+    height: 5rem;
+    position: relative;
 }
 
 .zmpSmall {
-  position: relative;
-  height: 3rem;
-  align-self: center;
-  left: -2rem;
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+    position: relative;
+    height: 3rem;
+    align-self: center;
+    left: -2rem;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .homeIconDiv {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .homeIconDiv:hover .zmpSmall {
-  opacity: 1;
-  left: 0;
+    opacity: 1;
+    left: 0;
 }
 
 .sidebar {
-  z-index: 5;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 1.2rem;
-  height: 90vh;
-  top: 2rem;
-  width: 10rem;
+    z-index: 5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1.2rem;
+    height: 90vh;
+    top: 2rem;
+    width: 10rem;
 }
 
 .nav-option {
-  position: absolute;
-  font-weight: 700;
-  opacity: 0;
-  left: -2rem;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  transition: all 0.2s ease;
+    position: absolute;
+    font-weight: 700;
+    opacity: 0;
+    left: -2rem;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease;
+}
+
+.menu {
+    display: none;
+    @media (min-width: $desktop-breakpoint) {
+        display: inherit;
+    }
 }
 
 .menu-number:hover {
-  .nav-option {
-    opacity: 1;
-    left: 2rem;
-  }
+    .nav-option {
+        opacity: 1;
+        left: 2rem;
+    }
 }
 
 .selected {
-  color: $orange;
-  text-decoration: line-through;
+    color: $orange;
+    text-decoration: line-through;
 }
 
 .portfolio-icon {
-  fill: $orange;
-  margin-right: $sm;
+    fill: $orange;
+    margin-right: $sm;
+}
+
+.portfolio-menu {
+    display: none;
+    @media (min-width: $desktop-breakpoint) {
+        display: inherit;
+    }
 }

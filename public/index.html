@@ -164,7 +164,40 @@
 
     <h2 class="subtitles" id="subtitle">G - R - O - U - P</h2>
 </div>
-
+<!--    Made by Erik Terwan    -->
+<!--   24th of November 2015   -->
+<!--        MIT License        -->
+<nav role='navigation'>
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+    
+    <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a href="#"><li>Home</li></a>
+      <a href="#"><li>About</li></a>
+      <a href="#"><li>Info</li></a>
+      <a href="#"><li>Contact</li></a>
+      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+    </ul>
+  </div>
+</nav>
 <div class="sidebar">
 <a class="home-icon" href="#">
 <div class="homeIconDiv">
@@ -853,8 +886,13 @@
 
         perc = (assetCounter * 100) / assets.length;
         b.set(perc);
-        if(assetCounter === assets.length || assetCounter === assets.length -1){
-            b.set(100);
+        if(assetCounter === assets.length || assetCounter === assets.length -1){ 
+        showPage();       
+        };
+    };
+
+    function showPage(){
+        b.set(100);
             clearInterval(interval);
             setTimeout(function() {
                 let preloader = document.getElementsByClassName("preloader");
@@ -866,10 +904,8 @@
                     container[0].style.opacity=1;
                     container[0].style.display = "block";
                     }, 200);
-                }, 100);           
-        };
+                }, 100);    
     };
-
 
 </script>
 

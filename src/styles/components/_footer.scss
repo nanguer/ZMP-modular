@@ -1,27 +1,30 @@
 .icons {
-    position: relative;
-    float: right;
+  @media (min-width: $desktop-breakpoint) {
     display: flex;
-    flex-direction: row;
-    justify-items: center;
-    z-index: 5;
-    bottom: 1rem;
+  }
+  position: relative;
+  float: right;
+  display: none;
+  flex-direction: row;
+  justify-items: center;
+  z-index: 5;
+  bottom: 1rem;
 }
 
 .icon {
-    margin: 0 5px;
-    height: 3rem;
-    width: 3rem;
+  margin: 0 5px;
+  height: 3rem;
+  width: 3rem;
 }
 
 a {
-    fill: $grey;
-    -webkit-transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease;
+  fill: $grey;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease;
 }
 
 a:hover {
-    fill: $orange;
+  fill: $orange;
 }
