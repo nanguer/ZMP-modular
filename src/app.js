@@ -13,19 +13,36 @@ function lazyLoadChunk() {
     $('.sidebar').on('click', '#historia-option', function() {
       module.openHistory($(this));
     });
+    $('.hambHistoria').click(function() {
+      $('input').prop('checked', false);
+      module.openHistory($(this));
+    });
     $('.sidebar').on('click', '#services-option', function() {
+      module.openServicesPage();
+    });
+    $('.hambServices').click(function() {
+      $('input').prop('checked', false);
       module.openServicesPage();
     });
     $('.sidebar').on('click', '#kontakt-option', function() {
       module.openKontakt($(this));
     });
+    $('.hambKontakt').click(function() {
+      $('input').prop('checked', false);
+      module.openKontakt($(this));
+    });
     $('.sidebar').on('click', '.portfolio-menu', function() {
+      module.openPortfolio();
+    });
+    $('.hambPortfolio').click(function() {
+      $('input').prop('checked', false);
       module.openPortfolio();
     });
     $('.portfolio-sidebar').on('click', '.close-btn', function() {
       module.closePortfolio();
     });
-    $('.home-icon, #home-option').click(function() {
+    $('.home-icon, #home-option, .hambHome').click(function() {
+      $('input').prop('checked', false);
       module.goHome($(this));
     });
 
