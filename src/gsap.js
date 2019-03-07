@@ -1,5 +1,7 @@
 import { TimelineMax, TweenMax } from 'gsap';
 
+console.log(innerHeight + ' ' + innerWidth);
+
 var t0 = new TimelineMax(),
   subtitlesDisappear = new TimelineMax({ paused: true }),
   bigLogoSwipe = new TimelineMax({ paused: true }),
@@ -61,19 +63,36 @@ subtitlesDisappear.to(
   '-=0.5'
 );
 active.t2 = true;
-bigLogoSwipe.to(
-  '#bigLogo',
-  0.5,
-  {
-    opacity: 0.1,
-    transform: 'scale(12)',
-    ease: ExpoScaleEase.config(1, 12),
-    left: '450%',
-    delay: 0.7
-  },
+if (innerWidth < 721) {
+  bigLogoSwipe.to(
+    '#bigLogo',
+    0.5,
+    {
+      opacity: 0.1,
+      transform: 'scale(12)',
+      ease: ExpoScaleEase.config(1, 12),
+      left: '200%',
+      delay: 0.7
+    },
 
-  '-=0.5'
-);
+    '-=0.5'
+  );
+} else {
+  bigLogoSwipe.to(
+    '#bigLogo',
+    0.5,
+    {
+      opacity: 0.1,
+      transform: 'scale(12)',
+      ease: ExpoScaleEase.config(1, 12),
+      left: '450%',
+      delay: 0.7
+    },
+
+    '-=0.5'
+  );
+}
+
 stripes.to('.stripes', 3, {
   left: '-500px',
   ease: Expo.easeInOut,

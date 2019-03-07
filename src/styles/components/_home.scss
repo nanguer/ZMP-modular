@@ -1,7 +1,7 @@
 .stripes {
     background-image: repeating-linear-gradient( to right, transparent, transparent 218px, grey 2px, grey 219px);
     display: block;
-    position: absolute;
+    position: fixed;
     height: 105vh;
     width: 400vw;
     background-color: transparent;
