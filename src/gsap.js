@@ -1,7 +1,5 @@
 import { TimelineMax, TweenMax } from 'gsap';
 
-console.log(innerHeight + ' ' + innerWidth);
-
 var t0 = new TimelineMax(),
   subtitlesDisappear = new TimelineMax({ paused: true }),
   bigLogoSwipe = new TimelineMax({ paused: true }),
@@ -21,7 +19,14 @@ var t0 = new TimelineMax(),
     t5: false,
     t6: false,
     t7: false
-  };
+  },
+  bgLeft = '200%',
+  bgLeftP = '-260%';
+
+if (innerWidth > 720) {
+  bgLeft = '450%';
+  bgLeftP = '-630%';
+}
 
 //NAVIGATION ANIMATION
 t0.to('.subtitles', 0.7, {
@@ -63,35 +68,19 @@ subtitlesDisappear.to(
   '-=0.5'
 );
 active.t2 = true;
-if (innerWidth < 721) {
-  bigLogoSwipe.to(
-    '#bigLogo',
-    0.5,
-    {
-      opacity: 0.1,
-      transform: 'scale(12)',
-      ease: ExpoScaleEase.config(1, 12),
-      left: '200%',
-      delay: 0.7
-    },
 
-    '-=0.5'
-  );
-} else {
-  bigLogoSwipe.to(
-    '#bigLogo',
-    0.5,
-    {
-      opacity: 0.1,
-      transform: 'scale(12)',
-      ease: ExpoScaleEase.config(1, 12),
-      left: '450%',
-      delay: 0.7
-    },
-
-    '-=0.5'
-  );
-}
+bigLogoSwipe.to(
+  '#bigLogo',
+  0.5,
+  {
+    opacity: 0.1,
+    transform: 'scale(12)',
+    ease: ExpoScaleEase.config(1, 12),
+    left: bgLeft,
+    delay: 0.7
+  },
+  '-=0.5'
+);
 
 stripes.to('.stripes', 3, {
   left: '-500px',
@@ -100,7 +89,7 @@ stripes.to('.stripes', 3, {
 });
 bigLogoSwipe.add('Z');
 bigLogoSwipe.to('#bigLogo', 1, {
-  left: '-630%',
+  left: bgLeftP,
   ease: Linear.ease,
   delay: 0.5
 });

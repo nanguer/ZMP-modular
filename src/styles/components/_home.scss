@@ -46,11 +46,12 @@
     opacity: 0;
     position: relative;
     margin: 5% 25% 5%;
-    left: -2vw;
+    left: 1.5vw;
     top: 4vh;
     color: rgb(220, 220, 220);
     @media (min-width: $desktop-breakpoint) {
         width: 150px;
+        left: -2vw;
     }
 }
 

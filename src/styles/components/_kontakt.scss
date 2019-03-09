@@ -1,39 +1,42 @@
 .kontakt {
-    left: 13vw;
-    width: 100vw;
-    display: flex;
-    position: absolute;
-    opacity: 1;
-    top: 0;
+  left: 13vw;
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  opacity: 1;
+  top: 0;
 }
 
 .kontakt__container {
-    display: flex;
-    flex-direction: row;
-    width: inherit;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  justify-content: space-around;
 }
 
 .kontakt__text {
-    opacity: 0;
-    position: relative;
-    flex-direction: column;
-    max-width: 24vw;
+  opacity: 0;
+  position: relative;
+  flex-direction: column;
+  max-width: 24vw;
+  left: -60%;
+  align-self: center;
+  @media (min-width: $desktop-breakpoint) {
     left: -20%;
-    align-self: center;
+  }
 }
 
 .map-container {
-    opacity: 0;
-    position: relative;
-    height: 100vh;
-    width: 40%;
-    background: grey;
-    right: -33%;
-    z-index: 5;
+  opacity: 0;
+  position: relative;
+  height: 100vh;
+  width: 40%;
+  background: grey;
+  right: -33%;
+  z-index: 5;
 }
 
 #map {
-    width: initial;
-    height: inherit;
+  width: initial;
+  height: inherit;
 }
