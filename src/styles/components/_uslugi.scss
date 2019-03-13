@@ -1,11 +1,16 @@
 .uslugi {
     color: white;
     display: none;
+    flex-direction: column;
     position: absolute;
     max-width: 90vw;
     left: 0;
     opacity: 0;
     top: 20vh;
+    align-content: center;
+    height: 10v0h;
+    overflow: scroll;
+    z-index: 6;
     @media (min-width: $desktop-breakpoint) {
         top: 29vh;
     }
@@ -14,6 +19,7 @@
 .uslugi__text {
     display: flex;
     flex-direction: column;
+    height: inherit;
 }
 
 .paragraph {
@@ -182,6 +188,33 @@ p.service-type {
     stroke-width: 3px;
     stroke-dasharray: 1756;
     opacity: 0;
+}
+
+.uslugi__wrapper {
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    overflow: scroll; // @media (min-width: $desktop-breakpoint) {
+    //     display: none;
+    // }
+}
+
+.uslugi__grid {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid white;
+    @media (min-width: $desktop-breakpoint) {
+        display: none;
+    }
+}
+
+.grid__box {
+    position: relative;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
 }
 
 @keyframes animateIcon {
