@@ -6,9 +6,9 @@
     max-width: 90vw;
     left: 0;
     opacity: 0;
-    top: 20vh;
+    top: inherit;
     align-content: center;
-    height: 10v0h;
+    height: 100vh;
     overflow: scroll;
     z-index: 6;
     @media (min-width: $desktop-breakpoint) {
@@ -20,6 +20,18 @@
     display: flex;
     flex-direction: column;
     height: inherit;
+    position: relative;
+    top:20%;
+}
+
+.uslugi__grid {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top:20%;
+    @media (min-width: $desktop-breakpoint) {
+        display: none;
+    }
 }
 
 .paragraph {
@@ -190,31 +202,19 @@ p.service-type {
     opacity: 0;
 }
 
-.uslugi__wrapper {
-    display: block;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    overflow: scroll; // @media (min-width: $desktop-breakpoint) {
-    //     display: none;
-    // }
-}
 
-.uslugi__grid {
-    display: flex;
-    flex-direction: column;
-    border: 5px solid white;
-    @media (min-width: $desktop-breakpoint) {
-        display: none;
-    }
-}
 
 .grid__box {
     position: relative;
     height: 20%;
     display: flex;
     flex-direction: column;
+    border: 4px solid white;
+    border-bottom:none;
+}
+
+.grid__box__bottom {
+    border-bottom: 4px solid white;
 }
 
 @keyframes animateIcon {

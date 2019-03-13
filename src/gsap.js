@@ -21,11 +21,15 @@ var t0 = new TimelineMax(),
     t7: false
   },
   bgLeft = '200%',
-  bgLeftP = '-260%';
+  bgLeftP = '-260%',
+  kontaktLeft = 85,
+  usLeft = '10vw';
 
 if (innerWidth > 720) {
   bgLeft = '450%';
   bgLeftP = '-630%';
+  kontaktLeft = 175;
+  usLeft = '15vw';
 }
 
 //NAVIGATION ANIMATION
@@ -103,7 +107,7 @@ historiaBlock.to('#historia', 1, {
 uslugiBlock.to('#uslugi', 1, {
   display: 'flex',
   opacity: 1,
-  left: '15vw',
+  left: usLeft,
   ease: Expo.easeInOut
 });
 varConsole.to('.console', 0.5, {
@@ -128,7 +132,7 @@ kontaktBlock.to('.map-container', 0.5, {
 });
 kontaktBlock.to('.kontakt__text', 1.2, {
   opacity: 1,
-  x: 175,
+  x: kontaktLeft,
   ease: Expo.easeInOut
 });
 
