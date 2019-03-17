@@ -1,254 +1,282 @@
 .uslugi {
-    color: white;
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    max-width: 90vw;
-    left: 0;
-    opacity: 0;
-    top: inherit;
-    align-content: center;
-    height: 100vh;
-    overflow: scroll;
-    z-index: 6;
-    @media (min-width: $desktop-breakpoint) {
-        top: 29vh;
-    }
+  color: white;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  max-width: 90vw;
+  left: 0;
+  opacity: 0;
+  top: inherit;
+  align-content: center;
+  height: 100vh;
+  overflow: scroll;
+  z-index: 6;
+  @media (min-width: $desktop-breakpoint) {
+    top: 29vh;
+  }
 }
 
 .uslugi__text {
-    display: flex;
-    flex-direction: column;
-    
-    position: relative;
-    top:20%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 20%;
 }
 
 .uslugi__grid {
-    left: 50%;
-    top: 60vh;
-    position: relative;
-   min-height: fit-content;
-    width: 80%;
-    transform: translate(-50%);
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 8%;
-    
-    @media (min-width: $desktop-breakpoint) {
-        display: none;
-    }
+  left: 50%;
+  top: auto;
+  position: relative;
+  min-height: fit-content;
+  width: 80%;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8%;
+  @media (min-width: $desktop-breakpoint) {
+    display: none;
+  }
+}
+
+.uslugi__grid > div.grid__box > div.grid__icon > p {
+  font-weight: 700;
+}
+
+.uslugi__grid :nth-child(1) > div.grid__icon > p {
+  color: $green;
+}
+
+.uslugi__grid :nth-child(2) > div.grid__icon > p {
+  color: $orange;
+}
+
+.uslugi__grid :nth-child(3) > div.grid__icon > p {
+  color: $violet;
+}
+
+.uslugi__grid :nth-child(4) > div.grid__icon > p {
+  color: $red;
 }
 
 .paragraph {
-    max-width: 80vw;
-    float: left;
-    @media (min-width: $desktop-breakpoint) {
-        max-width: 30vw;
-    }
+  max-width: 80vw;
+  float: left;
+  height: 100vh;
+  @media (min-width: $desktop-breakpoint) {
+    max-width: 30vw;
+  }
 }
 
 .paragraph p {
+  font-size: 21px;
+  @media (max-height: 568px) {
+    font-size: 17px;
+  }
+  @media (min-width: $desktop-breakpoint) {
     font-size: 14px;
+  }
 }
 
 .console {
-    display: none;
-    @media (min-width: $desktop-breakpoint) {
-        border: solid 3px gray;
-        height: 300px;
-        width: 480px;
-        float: right;
-        right: -20vw;
-        margin-left: 80px;
-        margin-right: 1rem;
-        opacity: 0;
-        position: relative;
-        display: flex;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
+  display: none;
+  @media (min-width: $desktop-breakpoint) {
+    border: solid 3px gray;
+    height: 300px;
+    width: 480px;
+    float: right;
+    right: -20vw;
+    margin-left: 80px;
+    margin-right: 1rem;
+    opacity: 0;
+    position: relative;
+    display: flex;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 .line-container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    width: 20%;
-    margin-right: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+  margin-right: 0px;
 }
 
 .actual-line {
-    background-color: white;
-    height: 17rem;
-    width: 2px;
-    margin: auto;
-    position: fixed;
+  background-color: white;
+  height: 17rem;
+  width: 2px;
+  margin: auto;
+  position: fixed;
 }
 
 .service__icon-container {
-    width: 5rem;
-    height: 5rem;
-    text-align: center;
-    border: 2px solid white;
-    border-radius: 1.2rem;
-    position: relative;
-    background-color: $light-black;
-    margin: 0;
-    bottom: -11rem;
-    z-index: 7;
-    transition: all 0.2s ease;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 1.2rem;
+  position: relative;
+  background-color: $light-black;
+  margin: 0;
+  bottom: -11rem;
+  z-index: 7;
+  transition: all 0.2s ease;
 }
 
 .service__number {
-    top: 66%;
-    position: relative;
-    width: auto;
-    text-align: center;
+  top: 66%;
+  position: relative;
+  width: auto;
+  text-align: center;
 }
 
 .event-icon {
-    stroke: none;
-    margin: 5px 0;
-    fill: $green;
-    opacity: 1;
-    transition: all 0.2s ease;
+  stroke: none;
+  margin: 5px 0;
+  fill: $green;
+  opacity: 1;
+  transition: all 0.2s ease;
 }
 
 .event-icon__animate {
-    position: absolute;
-    width: 57px;
-    left: 0.6vw;
-    bottom: 0.1vh;
-    fill: none;
-    stroke: $green;
-    stroke-width: 8px;
-    stroke-dasharray: 2023;
-    opacity: 0;
+  position: absolute;
+  width: 57px;
+  left: 0.6vw;
+  bottom: 0.1vh;
+  fill: none;
+  stroke: $green;
+  stroke-width: 8px;
+  stroke-dasharray: 2023;
+  opacity: 0;
 }
 
 .service__icon-container:hover .event-icon {
-    opacity: 0;
+  opacity: 0;
 }
 
 .service__icon-container:hover .event-icon__animate {
-    animation: animateIcon 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+  animation: animateIcon 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
 }
 
 .service__icon-container:hover p.service-type {
-    opacity: 0;
+  opacity: 0;
 }
 
 p.service-type {
-    margin: 0;
-    font-size: 12px;
-    color: white;
-    transition: all 0.2s ease;
+  margin: 0;
+  font-size: 12px;
+  color: white;
+  transition: all 0.2s ease;
 }
 
 #sound-icon {
-    fill: $orange;
+  fill: $orange;
 }
 
 #sound-icon__animate {
-    fill: none;
-    width: 67px;
-    stroke: $orange;
-    position: absolute;
-    left: 0.5vw;
-    stroke-width: 17rem;
-    bottom: -2.1vh;
-    stroke-dasharray: 20630;
+  fill: none;
+  width: 67px;
+  stroke: $orange;
+  position: absolute;
+  left: 0.5vw;
+  stroke-width: 17rem;
+  bottom: -2.1vh;
+  stroke-dasharray: 20630;
 }
 
 #oswietlenie-icon {
-    fill: $aquamarine;
+  fill: $aquamarine;
 }
 
 #oswietlenie-icon__animate {
-    fill: none;
-    width: 67px;
-    stroke: $aquamarine;
-    position: absolute;
-    left: 6px;
-    stroke-width: 5px;
-    bottom: 20px;
-    stroke-dasharray: 1771;
+  fill: none;
+  width: 67px;
+  stroke: $aquamarine;
+  position: absolute;
+  left: 6px;
+  stroke-width: 5px;
+  bottom: 20px;
+  stroke-dasharray: 1771;
 }
 
 #ts-icon {
-    fill: $violet;
+  fill: $violet;
 }
 
 #ts-icon__animate {
-    width: 67px;
-    left: 7px;
-    bottom: 24px;
-    fill: none;
-    stroke: $violet;
-    stroke-width: 5px;
-    stroke-dasharray: 1650;
+  width: 67px;
+  left: 7px;
+  bottom: 24px;
+  fill: none;
+  stroke: $violet;
+  stroke-width: 5px;
+  stroke-dasharray: 1650;
 }
 
 #proj-icon {
-    fill: $red;
+  fill: $red;
 }
 
 #proj-icon__animate {
-    position: absolute;
-    width: 57px;
-    left: 12px;
-    bottom: 11px;
-    fill: none;
-    stroke: $red;
-    stroke-width: 3px;
-    stroke-dasharray: 1756;
-    opacity: 0;
+  position: absolute;
+  width: 57px;
+  left: 12px;
+  bottom: 11px;
+  fill: none;
+  stroke: $red;
+  stroke-width: 3px;
+  stroke-dasharray: 1756;
+  opacity: 0;
 }
 
-
-
 .grid__box {
-    position: relative;
-    height: 20%;
-    display: flex;
-    flex-direction: column;
-    border: 4px solid white;
-    border-bottom:none;
+  position: relative;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  border: 4px solid white;
+  border-bottom: none;
 }
 
 .grid__box > div > p {
-    margin:0;
+  margin: 0;
 }
 
 .grid__icon > p {
-    font-size: 80px;
+  font-size: 80px;
 }
 
-.grid__number, h5 {
-    position: relative;
-    height:20%;
-    margin:10px;
+.grid__number,
+h5 {
+  position: relative;
+  height: 20%;
+  margin: 10px;
+}
+
+h5 {
+  font-size: 1.1em;
 }
 
 .grid__box__bottom {
-    border-bottom: 4px solid white;
+  border-bottom: 4px solid white;
 }
 
 @keyframes animateIcon {
-    0% {
-        stroke-dashoffset: -2016;
-    }
-    30% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-        stroke-dashoffset: 0;
-    }
+  0% {
+    stroke-dashoffset: -2016;
+  }
+  30% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
 }
