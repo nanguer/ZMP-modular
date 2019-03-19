@@ -928,7 +928,6 @@
         showPage();       
         };
     };
-
     function showPage(){
         b.set(100);
             clearInterval(interval);
@@ -944,6 +943,10 @@
                     }, 200);
                 }, 100);    
     };
+
+    window.onload = function() {
+        setTimeout(showPage(), 100);
+    }
 
 </script>
 
