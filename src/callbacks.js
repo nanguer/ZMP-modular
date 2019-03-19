@@ -14,6 +14,7 @@ import {
 } from './gsap';
 import $ from 'jquery';
 
+let mobile;
 let target;
 var delay = 0;
 var delayHome = 2.8;
@@ -24,6 +25,8 @@ let bottom = {
   ts: '-2rem',
   threed: '-9rem'
 };
+
+innerWidth > 720 ? (mobile = false) : (mobile = true);
 
 function closePortfolio() {
   active.t6 = false;
@@ -171,10 +174,12 @@ function openServices(e) {
   active.t7 = true;
   target = e.delegateTarget.id;
   displayService(target);
-  TweenMax.to(`#${target}`, 0.5, {
-    bottom: bottom[target],
-    ease: Expo.easeInOut
-  });
+  if (!mobile) {
+    TweenMax.to(`#${target}`, 0.5, {
+      bottom: bottom[target],
+      ease: Expo.easeInOut
+    });
+  }
   servicesDetails.play();
 }
 
@@ -206,11 +211,13 @@ function openServicesPage() {
 function closeServices() {
   active.t7 = false;
   servicesDetails.reverse();
-  TweenMax.to(`#${target}`, 0.5, {
-    bottom: '-11rem',
-    ease: Expo.easeInOut,
-    delay: 0.5
-  });
+  if (!mobile) {
+    TweenMax.to(`#${target}`, 0.5, {
+      bottom: '-11rem',
+      ease: Expo.easeInOut,
+      delay: 0.5
+    });
+  }
 }
 
 function showSection(section) {

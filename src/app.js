@@ -50,6 +50,10 @@ function lazyLoadChunk() {
       module.openServices(e);
     });
 
+    $('.grid__box').click(function(e) {
+      module.openServices(e);
+    });
+
     $('.serv-sidebar').on('click', '.close-btn-right', function() {
       module.closeServices();
     });

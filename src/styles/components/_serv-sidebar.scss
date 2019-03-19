@@ -1,120 +1,127 @@
 .serv-sidebar {
-  align-items: center;
-  position: absolute;
-  background: white;
-  height: 100vh;
-  width: 40rem;
-  z-index: 8;
-  display: none;
-  opacity: 0;
-  top: 0;
-  right: -285px;
-  flex-direction: column;
-  overflow: scroll;
+    align-items: center;
+    position: absolute;
+    background: white;
+    height: 100vh;
+    width: 100vw;
+    z-index: 8;
+    display: none;
+    opacity: 0;
+    top: 0;
+    right: -285px;
+    flex-direction: column;
+    overflow: scroll;
+    @media (min-width: $desktop-breakpoint) {
+        width: 40rem;
+    }
+}
+
+.service-template {
+    width: inherit;
 }
 
 .tools {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px;
 }
 
-div.tools > div {
-  text-align: center;
+div.tools>div {
+    text-align: center;
 }
 
 .ss__text-container {
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  margin: $md 2 * $md;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    margin: $md 2 * $md;
 }
 
 .ss_text {
-  color: black;
-  margin: 25px 0 25px;
+    color: black;
+    margin: 25px 0 25px;
 }
 
-.ss__list > p,
-.ss__list2 > p {
-  font-weight: 800;
-  color: black;
+.ss__list>p,
+.ss__list2>p {
+    font-weight: 800;
+    color: black;
 }
 
 .ss__icon {
-  height: 70px;
-  width: 45px;
+    height: 70px;
+    width: 45px;
 }
 
 .ss__icon_small {
-  height: 55px;
-  width: 55px;
+    height: 55px;
+    width: 55px;
 }
 
 .ss__icon_md {
-  height: 55px;
-  width: 120px;
+    height: 55px;
+    width: 120px;
 }
 
 .ss__icon_4d {
-  height: 55px;
-  width: $md * 2.5;
+    height: 55px;
+    width: $md * 2.5;
 }
 
 .ss__icon_small_adob {
-  height: 100px;
-  width: 220px;
+    height: 100px;
+    width: 220px;
 }
 
 h4 {
-  font-size: 42px;
-  margin: 1rem 0;
-  font-weight: 800;
+    font-size: 42px;
+    margin: 1rem 0;
+    font-weight: 800;
 }
 
-svg + p {
-  text-align: center;
+svg+p {
+    text-align: center;
 }
 
 .close-btn-right {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  cursor: pointer;
-  align-self: flex-end;
-  width: 35px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    align-self: flex-end;
+    width: 35px;
 }
 
-.close-btn-right > path {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 30;
+.close-btn-right>path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 30;
 }
 
 .close-btn-right:hover path.one {
-  animation: draw-cross 0.5s linear forwards;
+    animation: draw-cross 0.5s linear forwards;
 }
 
 .close-btn-right:hover path.two {
-  animation: draw-cross 0.5s linear forwards;
-  animation-delay: 0.2s;
+    animation: draw-cross 0.5s linear forwards;
+    animation-delay: 0.2s;
 }
 
 .menu-data {
-  align-self: flex-start;
-  position: relative;
-  left: 17%;
-  top: -45%;
+    align-self: flex-start;
+    position: relative;
+    left: 17%;
+    top: -45%;
 }
 
 @keyframes draw-cross {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dashoffset: -30;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
+    0% {
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dashoffset: -30;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
