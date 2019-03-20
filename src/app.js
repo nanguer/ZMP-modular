@@ -43,7 +43,7 @@ function lazyLoadChunk() {
     });
     $('.home-icon, #home-option, .hambHome').click(function() {
       $('input').prop('checked', false);
-      module.goHome($(this));
+      module.goHome();
     });
 
     $('.service__icon-container').on('click', '.services-link', function(e) {

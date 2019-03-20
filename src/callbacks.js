@@ -88,8 +88,10 @@ function disappearKontakt() {
   active.t5 = false;
 }
 
-function goHome(select) {
-  select.children('.number').addClass('selected');
+function goHome() {
+  $('#home-option')
+    .children('.number')
+    .addClass('selected');
   $('.logo').removeClass('stopped');
   $('container-home').css('animation-play-state', 'running');
   if (active.t3) {
@@ -186,7 +188,7 @@ function openServices(e) {
 function openServicesPage() {
   active.t4 = true;
   stopGlitch();
-  $(this)
+  $('#services-option')
     .children('.number')
     .addClass('selected');
   if (!active.t1) {
