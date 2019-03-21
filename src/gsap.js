@@ -1,4 +1,5 @@
 import { TimelineMax, TweenMax } from 'gsap';
+import {mobile} from './app'
 
 var t0 = new TimelineMax(),
   subtitlesDisappear = new TimelineMax({ paused: true }),
@@ -23,13 +24,15 @@ var t0 = new TimelineMax(),
   bgLeft = '200%',
   bgLeftP = '-260%',
   kontaktLeft = 85,
-  usLeft = '10vw';
+  usLeft = '10vw',
+  displayUslugi='inline';
 
 if (innerWidth > 720) {
   bgLeft = '450%';
   bgLeftP = '-630%';
   kontaktLeft = 175;
   usLeft = '15vw';
+  displayUslugi= 'flex';
 }
 
 //NAVIGATION ANIMATION
@@ -105,7 +108,7 @@ historiaBlock.to('#historia', 1, {
   ease: Expo.easeInOut
 });
 uslugiBlock.to('#uslugi', 1, {
-  display: 'flex',
+  display: displayUslugi,
   opacity: 1,
   left: usLeft,
   ease: Expo.easeInOut

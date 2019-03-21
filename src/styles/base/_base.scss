@@ -29,7 +29,7 @@ h3 {
     font-weight: 700;
     font-size: 30px;
     @media (min-width: $desktop-breakpoint) {
-        font-size: 27px;
+        font-size: 35px;
     }
 }
 
@@ -54,4 +54,7 @@ li {
 
 div>p {
     font-size: 14px;
+     @media (min-width: $desktop-breakpoint) {
+        font-size: 21px;
+    }
 }

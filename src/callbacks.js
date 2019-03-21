@@ -176,7 +176,7 @@ function openServices(e) {
   active.t7 = true;
   target = e.delegateTarget.id;
   displayService(target);
-  if (!mobile) {
+  if (mobile===false) {
     TweenMax.to(`#${target}`, 0.5, {
       bottom: bottom[target],
       ease: Expo.easeInOut

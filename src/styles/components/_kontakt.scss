@@ -31,9 +31,12 @@
   max-width: 60vw;
   top: 0vh;
   @media (min-width: $desktop-breakpoint) {
-    max-width: 24vw;
+    left: -15%;
     top: auto;
     align-self: center;
+  }
+  @media (max-width: 970px) and (min-width: 415px) {
+    max-width: 40vw;
   }
 }
 
