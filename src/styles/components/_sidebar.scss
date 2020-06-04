@@ -32,15 +32,19 @@
 }
 
 .sidebar {
-  z-index: 5;
+  display: none;
+  z-index: 7;
   position: relative;
-  display: flex;
+
   flex-direction: column;
   justify-content: space-between;
   margin-left: 1.2rem;
-  height: 90vh;
+  height: 95vh;
   top: 2rem;
   width: 10rem;
+  @media (min-width: $desktop-breakpoint) {
+    display: flex;
+  }
 }
 
 .nav-option {

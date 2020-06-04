@@ -1,36 +1,37 @@
-@import './base/settings';
-@import './base/base';
-@import './components/hamburguer';
-@import './components/historia';
-@import './components/home';
-@import './components/uslugi';
-@import './components/kontakt';
-@import './components/portfolio';
-@import './components/serv-sidebar';
-@import './components/sidebar';
-@import './components/footer';
-@import './components/events';
-@import './components/sound';
-@import './components/threed';
-@import './components/ts';
-@import './components/oswietlenie';
+@import "./base/settings";
+@import "./base/base";
+@import "./components/hamburguer";
+@import "./components/historia";
+@import "./components/ue";
+@import "./components/home";
+@import "./components/uslugi";
+@import "./components/kontakt";
+@import "./components/portfolio";
+@import "./components/serv-sidebar";
+@import "./components/sidebar";
+@import "./components/footer";
+@import "./components/events";
+@import "./components/sound";
+@import "./components/threed";
+@import "./components/ts";
+@import "./components/oswietlenie";
 @font-face {
-    font-family: 'LEIXO-DEMO';
-    src: url('../../fonts/LEIXO-DEMO.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "LEIXO-DEMO";
+  src: url("../../fonts/LEIXO-DEMO.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'OpenSans';
-    src: url('../../fonts/OpenSans.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "OpenSans";
+  src: url("../../fonts/OpenSans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Square721BT';
-    src: url('../../fonts/Square721BT.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Square721BT";
+  src: url("../../fonts/Square721BT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
