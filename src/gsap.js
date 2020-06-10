@@ -24,10 +24,6 @@ var t0 = new TimelineMax(),
     t7: false,
     t8: false,
   },
-  bgLeft = "",
-  bgLeftP = "",
-  kontaktLeft = 0,
-  usLeft = "",
   displayUslugi = "flex";
 
 //NAVIGATION ANIMATION
