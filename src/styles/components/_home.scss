@@ -45,6 +45,7 @@
 .logo.stopped:before {
   animation-play-state: paused;
   opacity: 0;
+  background: transparent;
 }
 
 #bigLogo {
@@ -89,9 +90,8 @@ div.logo > h2 {
 %container-home-styles {
   position: absolute;
   width: 100%;
-  max-width: 2048px;
+  max-width: 4096px;
   margin: 0 auto;
-
   height: 100%;
   top: 0;
   opacity: 1;

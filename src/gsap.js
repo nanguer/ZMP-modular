@@ -1,5 +1,5 @@
-import { TimelineMax, TweenMax } from "gsap";
-import { mobile } from "./app";
+import { TimelineMax } from "gsap";
+import { waitForFinalEvent, checkVars } from "./callbacks";
 
 var t0 = new TimelineMax(),
   subtitlesDisappear = new TimelineMax({ paused: true }),
@@ -24,19 +24,11 @@ var t0 = new TimelineMax(),
     t7: false,
     t8: false,
   },
-  bgLeft = "200%",
-  bgLeftP = "-260%",
-  kontaktLeft = 85,
-  usLeft = "10vw",
-  displayUslugi = "inline";
-
-if (innerWidth > 720) {
-  bgLeft = "450%";
-  bgLeftP = "-630%";
-  kontaktLeft = 175;
-  usLeft = "15vw";
+  bgLeft = "",
+  bgLeftP = "",
+  kontaktLeft = 0,
+  usLeft = "",
   displayUslugi = "flex";
-}
 
 //NAVIGATION ANIMATION
 t0.to(".subtitles", 0.7, {
@@ -100,7 +92,7 @@ wholeLogoSwipe.add("title-up");
 euProjektBlock.to(".section__ue", 0.5, {
   display: "flex",
   opacity: 1,
-  top: "50%",
+  top: innerWidth <= 880 ? "10vh" : "5vh",
   delay: 0.5,
   ease: Expo.easeInOut,
 });
@@ -113,7 +105,7 @@ bigLogoSwipe.to(
     opacity: 0.1,
     transform: "scale(12)",
     ease: ExpoScaleEase.config(1, 12),
-    left: bgLeft,
+    left: innerWidth >= 880 ? "450%" : "200%",
     delay: 0.7,
   },
   "-=0.5"
@@ -125,7 +117,7 @@ stripes.to(".stripes", 3, {
 });
 bigLogoSwipe.add("Z");
 bigLogoSwipe.to("#bigLogo", 1, {
-  left: bgLeftP,
+  left: innerWidth >= 880 ? "-630%" : "-260%",
   ease: Linear.ease,
   delay: 0.5,
 });
@@ -139,7 +131,7 @@ historiaBlock.to("#historia", 1, {
 uslugiBlock.to("#uslugi", 1, {
   display: displayUslugi,
   opacity: 1,
-  left: usLeft,
+  left: innerWidth <= 880 ? "0" : "10vw",
   ease: Expo.easeInOut,
 });
 varConsole.to(".console", 0.5, {
@@ -158,13 +150,15 @@ uslugiIcons.staggerFrom(
   0.2
 );
 kontaktBlock.to(".map-container", 0.5, {
-  opacity: 1,
+  //change this to appear/disappear map
+  display: "block",
+  opacity: 0,
   right: "0",
   ease: Expo.easeInOut,
 });
 kontaktBlock.to(".kontakt__text", 1.2, {
   opacity: 1,
-  x: kontaktLeft,
+  x: innerWidth >= 880 ? 175 : 85,
   ease: Expo.easeInOut,
 });
 

@@ -4,9 +4,12 @@
   max-width: 70vw;
   flex-direction: column;
   left: 0;
-  top: 20vh;
+  top: 10vh;
   display: none;
   opacity: 0;
+  @media (min-width: $desktop-breakpoint) {
+    top: 20vh;
+  }
 }
 
 .section__historia {

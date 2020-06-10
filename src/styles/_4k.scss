@@ -1,0 +1,73 @@
+@media (min-width: 2560px) {
+  body {
+    font-size: 24px;
+  }
+
+  #bigLogo {
+    left: -10%;
+  }
+
+  .section__ue,
+  .section {
+    max-width: 1620px;
+
+    p {
+      font-size: 32px;
+    }
+  }
+
+  .section__ue {
+    left: 25vh;
+  }
+
+  .section {
+    top: 30vh;
+  }
+
+  .paragraph {
+    p {
+      font-size: 24px;
+    }
+  }
+
+  .sidebar {
+    width: 12rem;
+  }
+
+  .kontakt__text > ul,
+  div > p {
+    font-size: 32px;
+    line-height: 3rem;
+  }
+
+  .serv-sidebar {
+    width: 50rem;
+  }
+  .ss__bg-picture > img {
+    width: 100%;
+  }
+  .ss__text-container {
+    margin-top: 7rem;
+  }
+
+  //CONSOLE
+
+  .console {
+    margin-left: 20rem;
+  }
+  .event-icon__animate {
+    left: 0.3vw;
+  }
+
+  #sound-icon__animate {
+    bottom: -1vh;
+    left: 0.3vw;
+  }
+
+  .service__number {
+    font-size: 16px;
+  }
+  .line-container {
+    margin: 0 0.25rem;
+  }
+}

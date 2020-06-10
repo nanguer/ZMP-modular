@@ -24,6 +24,7 @@ function lazyLoadChunk() {
     });
     $(".hambServices").click(function () {
       $("input").prop("checked", false);
+
       module.openServicesPage();
     });
     $(".sidebar").on("click", "#kontakt-option", function () {
@@ -51,6 +52,11 @@ function lazyLoadChunk() {
       $("input").prop("checked", false);
       module.openPortfolio();
     });
+    $(".hambProjekty").click(function () {
+      $("input").prop("checked", false);
+      $(".container-home").css("overflow-y", "auto");
+      module.openEuProject($(this));
+    });
     $(".portfolio-sidebar").on("click", ".close-btn", function () {
       module.closePortfolio();
     });
@@ -65,6 +71,7 @@ function lazyLoadChunk() {
 
     $(".grid__box").click(function (e) {
       module.openServices(e);
+      $("div#menuToggle").css("display", "none");
     });
 
     $(".serv-sidebar").on("click", ".close-btn-right", function () {
@@ -81,6 +88,6 @@ function disableLinks() {
   $("#sidebar , nav.nav").css("z-index", "0");
   setTimeout(() => {
     $("#sidebar").css("z-index", "5");
-    $("nav.nav").css("z-index", "7");
+    $("nav.nav").css("z-index", "9");
   }, 2500);
 }

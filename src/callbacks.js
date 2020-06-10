@@ -28,7 +28,74 @@ let bottom = {
   threed: "-9rem",
 };
 
-innerWidth > 720 ? (mobile = false) : (mobile = true);
+let loadedSize = 0;
+
+$(window).on("load", function () {
+  loadedSize = innerWidth;
+  innerWidth < 880 ? (mobile = true) : (mobile = false);
+});
+
+$(window).resize(function () {
+  let difference = 0;
+  waitForFinalEvent(
+    function () {
+      if (innerWidth > loadedSize) {
+        difference = innerWidth - loadedSize;
+      } else if (loadedSize > innerWidth) {
+        difference = loadedSize - innerWidth;
+      }
+
+      if (loadedSize > 880) {
+        difference >= 600 ? location.reload() : null;
+      } else if (difference >= 250) {
+        return location.reload();
+      }
+      innerWidth <= 880 ? (mobile = true) : (mobile = false);
+      if (!mobile) {
+        innerWidth <= 880
+          ? $("div#menuToggle").css("display", "block")
+          : $("div#menuToggle").css("display", "none");
+      } else {
+        $("div#menuToggle").css("display", "block");
+      }
+      if (mobile && active.t4) {
+        TweenMax.to(
+          ["#sound", "#events", "#oswietlenie", "#threed", "#ts"],
+          0.3,
+          {
+            bottom: "0rem",
+          }
+        );
+      } else if (!mobile && active.t4) {
+        TweenMax.to(
+          ["#sound", "#events", "#oswietlenie", "#threed", "#ts"],
+          0.3,
+          {
+            bottom: "-11rem",
+          }
+        );
+      }
+      if (active.t8 && mobile) {
+        // TweenMax.to(".section__ue", 0.5, {
+        //   top: mobile ? "10%" : "50%",
+        // });
+        $(".container-home").css("overflow-y", "auto");
+      } else $(".container-home").css("overflow-y", "hidden");
+      if (active.t5) {
+        TweenMax.to(".kontakt__text", 0.3, {
+          x: innerWidth >= 880 ? 175 : 85,
+        });
+      }
+      if (loadedSize > 880 && innerWidth <= 880) {
+        $(".uslugi__grid").css("left", "-9%");
+      }
+    },
+    500,
+    "checkMobile"
+  );
+});
+
+innerWidth > 880 ? (mobile = false) : (mobile = true);
 
 function closePortfolio() {
   active.t6 = false;
@@ -53,10 +120,8 @@ function closeSidebarsIfActives(event) {
 }
 
 function disappearSubtitles(comesFrom5) {
-  console.log("disappear subtitles");
   delay = 0;
   if (comesFrom5) {
-    console.log("comesfrom5");
     subtitlesDisappear.play();
   }
   $("#home-option").children(".number").removeClass("selected");
@@ -76,6 +141,7 @@ function disappearUslugi() {
   varConsole.reverse();
   uslugiBlock.reverse();
   $("#services-option").children(".number").removeClass("selected");
+
   active.t4 = false;
 }
 
@@ -89,13 +155,14 @@ function disappearEuProjekt() {
   delay = 1.5;
   euProjektBlock.reverse();
   wholeLogoSwipe.reverse();
-  console.log("disappear EU Proj");
-  $("#euProject-option").children(".number").removeClass("selected");
 
+  $("#euProject-option").children(".number").removeClass("selected");
+  $(".container-home").css("overflow-y", "hidden");
   active.t8 = false;
 }
 
 function goHome() {
+  checkVars();
   $("#home-option").children(".number").addClass("selected");
   $(".logo").removeClass("stopped");
   $("container-home").css("animation-play-state", "running");
@@ -124,6 +191,7 @@ function goHome() {
   subtitlesDisappear.tweenTo("0", {
     delay: delayHome,
   });
+
   active.t1 = false;
 }
 
@@ -132,7 +200,6 @@ function openHistory(select) {
   stopGlitch();
   select.children(".number").addClass("selected");
   if (!active.t1 && !active.t8) {
-    console.log("disapear subtitle one");
     disappearSubtitles(true);
   } else if (active.t8) {
     disappearEuProjekt();
@@ -161,7 +228,6 @@ function openHistory(select) {
 function openKontakt(select) {
   if (active.t5) return false;
   else {
-    console.log("opening services");
     active.t5 = true;
     stopGlitch();
     select.children(".number").addClass("selected");
@@ -191,7 +257,6 @@ function openKontakt(select) {
 function openEuProject(select) {
   if (active.t8) return false;
   else {
-    console.log("running open project");
     active.t8 = true;
     stopGlitch();
     select.children(".number").addClass("selected");
@@ -207,8 +272,9 @@ function openEuProject(select) {
       disappearKontakt();
       resetAnimations(1.3, 1.3);
     }
+    TweenMax.to(".subtitles", 0.5, { opacity: "0" });
     wholeLogoSwipe.tweenTo("title-up", {
-      delay: delay * 3,
+      delay: active.t1 ? delay * 3 : 1,
       onComplete: showSection,
       onCompleteParams: [euProjektBlock],
     });
@@ -242,7 +308,6 @@ function openServices(e) {
 function openServicesPage() {
   if (active.t4) return false;
   else {
-    console.log("opening services");
     active.t4 = true;
     stopGlitch();
     $("#services-option").children(".number").addClass("selected");
@@ -274,17 +339,22 @@ function openServicesPage() {
 function closeServices() {
   active.t7 = false;
   servicesDetails.reverse();
-  if (!mobile) {
+  if (mobile === false) {
     TweenMax.to(`#${target}`, 0.5, {
       bottom: "-11rem",
       ease: Expo.easeInOut,
       delay: 0.5,
     });
   }
+
+  if (mobile) {
+    $("div#menuToggle").css("display", "block");
+  }
 }
 
 function showSection(section) {
   section.play();
+
   if (section === uslugiBlock) {
     varConsole.play();
     uslugiIcons.play();
@@ -302,6 +372,7 @@ function displayService(target) {
 
 function stopGlitch() {
   $(".logo").addClass("stopped");
+  //$(".subtitles").css("opacity", "0");
 }
 
 function resetAnimations(delayFactor1, delayFactor2) {
@@ -316,7 +387,38 @@ function resetAnimations(delayFactor1, delayFactor2) {
   // });
 }
 
+//detect window resize
+var waitForFinalEvent = (function () {
+  var timers = {};
+  return function (callback, ms, uniqueId) {
+    if (!uniqueId) {
+      uniqueId = "Don't call this twice without a uniqueId";
+    }
+    if (timers[uniqueId]) {
+      clearTimeout(timers[uniqueId]);
+    }
+    timers[uniqueId] = setTimeout(callback, ms);
+  };
+})();
+
+function checkVars(bgLeft, bgLeftP, kontaktLeft, usLeft, displayUslugi) {
+  if (innerWidth >= 880) {
+    bgLeft = "450%";
+    bgLeftP = "-630%";
+    kontaktLeft = 175;
+    usLeft = "15vw";
+    displayUslugi = "flex";
+  } else {
+    (bgLeft = "200%"),
+      (bgLeftP = "-260%"),
+      (kontaktLeft = 85),
+      (usLeft = "10vw"),
+      (displayUslugi = "flex");
+  }
+}
+
 export {
+  checkVars,
   closeServices,
   closeSidebarsIfActives,
   closePortfolio,
@@ -335,4 +437,5 @@ export {
   showSection,
   stopGlitch,
   openEuProject,
+  waitForFinalEvent,
 };
