@@ -158,6 +158,7 @@ function disappearEuProjekt() {
 
   $("#euProject-option").children(".number").removeClass("selected");
   $(".container-home").css("overflow-y", "hidden");
+  $(".euFlag").css("opacity", "1");
   active.t8 = false;
 }
 
@@ -278,6 +279,7 @@ function openEuProject(select) {
       onComplete: showSection,
       onCompleteParams: [euProjektBlock],
     });
+    $(".euFlag").css("opacity", "0");
   }
 }
 

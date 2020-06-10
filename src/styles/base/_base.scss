@@ -66,15 +66,17 @@ nav {
   right: 0;
   z-index: 9;
   .euFlag {
-    display: none;
+    display: block;
+    float: left;
     height: 100%;
     width: 8rem;
-    float: right;
+
     &:hover {
       cursor: pointer;
     }
     @media (min-width: $desktop-breakpoint) {
       display: block;
+      float: right;
     }
   }
   div#menuToggle {
